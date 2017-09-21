@@ -1,0 +1,2 @@
+c:\users\user\documents\visual studio 2015\Projects\Bank\Bank_Konsole\bin\Debug\Bank_Konsole.exe.config
+C:\Users\User\Desktop\Bank\Bank_Konsole\bin\Debug\Bank_Konsole.exe.config

@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank_Konsole", "Bank_Konsole\Bank_Konsole.csproj", "{8EC2F326-06BD-4760-92FE-F274E9CF11D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank_Klassenbibliothek", "Bank_Klassenbibliothek\Bank_Klassenbibliothek.csproj", "{F3336A9A-9D77-48F7-99FC-AFB04C513515}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bank_WPF", "Bank_WPF\Bank_WPF.csproj", "{7972EC0E-F23D-4254-AA60-EFF60F5CD4BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8EC2F326-06BD-4760-92FE-F274E9CF11D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EC2F326-06BD-4760-92FE-F274E9CF11D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EC2F326-06BD-4760-92FE-F274E9CF11D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EC2F326-06BD-4760-92FE-F274E9CF11D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3336A9A-9D77-48F7-99FC-AFB04C513515}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3336A9A-9D77-48F7-99FC-AFB04C513515}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3336A9A-9D77-48F7-99FC-AFB04C513515}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3336A9A-9D77-48F7-99FC-AFB04C513515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7972EC0E-F23D-4254-AA60-EFF60F5CD4BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7972EC0E-F23D-4254-AA60-EFF60F5CD4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7972EC0E-F23D-4254-AA60-EFF60F5CD4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7972EC0E-F23D-4254-AA60-EFF60F5CD4BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
