@@ -23,16 +23,17 @@ namespace Bank_Klassenbibliothek
             get { return ber; }
             set { ber = value; }
         }
+
         private Konto kon;
 
-        public Konto konto
+        public Konto Kon
         {
             get { return kon; }
             set { kon = value; }
         }
 
 
-        public Kunde(string name, string vorname, DateTime geburtsdatum, string straße, string hausnummer,string stadt,string postleitzahl, string telefonnummer,string kundennummer,Berater ber,Konto kon): base(name,vorname,geburtsdatum,straße,hausnummer,stadt,postleitzahl,telefonnummer)
+        public Kunde(string name, string vorname, DateTime geburtsdatum, string straße, string hausnummer,string stadt,string postleitzahl, string telefonnummer,string kundennummer,Berater ber, Konto kon): base(name,vorname,geburtsdatum,straße,hausnummer,stadt,postleitzahl,telefonnummer)
         {
             this.kundennummer = kundennummer;
             this.ber = ber;

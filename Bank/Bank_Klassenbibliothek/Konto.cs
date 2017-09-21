@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary1
+namespace Bank_Klassenbibliothek
 {
     public class Konto
     {
@@ -34,10 +34,6 @@ namespace ClassLibrary1
         }
 
 
-        // Liste für die Speicherung der Transaktionen
-        List<int> transaktionen = new List<int>();
-
-
 
 
         /******************************
@@ -47,9 +43,10 @@ namespace ClassLibrary1
         ******************************/
 
         // Konstruktor der Klasse
-        public Konto(string i, double ktostd)
+        public Konto(string iban, double ktostd)
         {
-            // ...
+            this.iban = iban;
+            this.kontostand = ktostd;
         }
 
 

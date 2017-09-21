@@ -16,7 +16,7 @@ namespace Bank_Klassenbibliothek
             set { kre = value; }
         }
 
-        Geschäftskundenberater(int BeraterID ,Kredit kre):base(BeraterID)
+        Geschäftskundenberater(int BeraterID, Kredit kre):base(BeraterID)
         {
             this.kre = kre;
         }
