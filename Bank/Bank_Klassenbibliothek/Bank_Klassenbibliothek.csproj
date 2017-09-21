@@ -41,6 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Berater.cs" />
+    <Compile Include="Geschäftskunde.cs" />
+    <Compile Include="Geschäftskundenberater.cs" />
+    <Compile Include="Kredit.cs" />
+    <Compile Include="Kunde.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
