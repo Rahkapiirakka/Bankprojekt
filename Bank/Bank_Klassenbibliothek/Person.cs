@@ -24,64 +24,10 @@ namespace Bank_Klassenbibliothek
             set { vorname = value; }
         }
 
-        private DateTime geburtsdatum;
-
-        public DateTime Geburtsdatum
-        {
-            get { return geburtsdatum; }
-            set { geburtsdatum = value; }
-        }
-
-        private String straße;
-
-        public String Straße
-        {
-            get { return straße; }
-            set { straße = value; }
-        }
-
-        private String hausnummer;
-
-        public String Hausnummer
-        {
-            get { return hausnummer; }
-            set { hausnummer = value; }
-        }
-
-        private string stadt;
-
-        public string Stadt
-        {
-            get { return stadt; }
-            set { stadt = value; }
-        }
-
-        private String postleitzahl;
-
-        public String Postleitzahl
-        {
-            get { return postleitzahl; }
-            set { postleitzahl = value; }
-        }
-
-        private String telefonnummer;
-
-        public String Telefonnummer
-        {
-            get { return telefonnummer; }
-            set { telefonnummer = value; }
-        }
-
-        public Person(string name, string vorname, DateTime geburtsdatum, string straße, string hausnummer, string stadt, string postleitzahl, string telefonnummer)
+        public Person(string name, string vorname)
         {
             this.name = name;
             this.vorname = vorname;
-            this.geburtsdatum = geburtsdatum;
-            this.straße = straße;
-            this.hausnummer = hausnummer;
-            this.stadt = stadt;
-            this.postleitzahl = postleitzahl;
-            this.telefonnummer = telefonnummer;
         }
 
     }

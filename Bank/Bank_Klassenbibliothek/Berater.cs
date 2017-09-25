@@ -16,7 +16,7 @@ namespace Bank_Klassenbibliothek
             set { beraterID = value; }
         }
 
-        public Berater(string name, string vorname, DateTime geburtsdatum, string straße, string hausnummer, string stadt, string postleitzahl, string telefonnummer, int beraterID) : base(name, vorname, geburtsdatum, straße, hausnummer, stadt, postleitzahl, telefonnummer)
+        public Berater(string name, string vorname, int beraterID) : base(name, vorname)
         {
             this.beraterID = beraterID;
         }

@@ -48,23 +48,23 @@ namespace Bank_Klassenbibliothek
             set { ende = value; }
         }
 
-        private Kunde k;
+        private int knr;
 
-        public Kunde kunde
-        {
-            get { return k; }
-            set { k = value; }
-        }
+	    public int Knr
+	    {
+		    get { return kundennummer;}
+		    set { kundennummer = value;}
+	    }
 
-        public Kredit (int kreditID, double summe, double zins, DateTime start, DateTime ende, Kunde k)
+
+        public Kredit (int kreditID, double summe, double zins, DateTime start, DateTime ende, int knr)
         {
             this.kreditID = kreditID;
             this.summe = summe;
             this.zins = zins;
             this.start = start;
             this.ende = ende;
-            this.k = k;
-
+            this.knr = knr;
         }
 
     }

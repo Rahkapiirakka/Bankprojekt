@@ -8,20 +8,12 @@ namespace Bank_Klassenbibliothek
 {
     public class Kunde:Person
     {
-        private string kundennummer;
+        private int kundennummer;
 
-        public string Kundennummer
+        public int Kundennummer
         {
             get { return kundennummer; }
             set { kundennummer = value; }
-        }
-
-        private Berater ber;
-
-        public Berater berater
-        {
-            get { return ber; }
-            set { ber = value; }
         }
 
         private Konto kon;
@@ -32,11 +24,9 @@ namespace Bank_Klassenbibliothek
             set { kon = value; }
         }
 
-
-        public Kunde(string name, string vorname, DateTime geburtsdatum, string straße, string hausnummer,string stadt,string postleitzahl, string telefonnummer,string kundennummer,Berater ber, Konto kon): base(name,vorname,geburtsdatum,straße,hausnummer,stadt,postleitzahl,telefonnummer)
+        public Kunde(string kundennummer, Konto kon): base(name, vorname)
         {
             this.kundennummer = kundennummer;
-            this.ber = ber;
             this.kon = kon;
         }
     }

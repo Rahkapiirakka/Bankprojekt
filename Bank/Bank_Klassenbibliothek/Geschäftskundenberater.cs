@@ -8,17 +8,11 @@ namespace Bank_Klassenbibliothek
 {
     public class Geschäftskundenberater: Berater
     {
-        private Kredit kre;
+        private List<Kredit> kre;
 
-        public Kredit kredit
+        Geschäftskundenberater(string name, string vorname, int beraterID):base(name, vorname, beraterID)
         {
-            get { return kre; }
-            set { kre = value; }
-        }
-
-        Geschäftskundenberater(string name, string vorname, DateTime geburtsdatum, string straße, string hausnummer, string stadt, string postleitzahl, string telefonnummer, int beraterID, Kredit kre):base(name, vorname, geburtsdatum, straße, hausnummer, stadt, postleitzahl,telefonnummer,beraterID)
-        {
-            this.kre = kre;
+            this.kre = new List<Kredit>(); 
         }
     }
 }
