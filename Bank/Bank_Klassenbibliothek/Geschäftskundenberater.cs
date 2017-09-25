@@ -16,7 +16,7 @@ namespace Bank_Klassenbibliothek
             set { kre = value; }
         }
 
-        Geschäftskundenberater(int BeraterID, Kredit kre):base(BeraterID)
+        Geschäftskundenberater(string name, string vorname, DateTime geburtsdatum, string straße, string hausnummer, string stadt, string postleitzahl, string telefonnummer, int beraterID, Kredit kre):base(name, vorname, geburtsdatum, straße, hausnummer, stadt, postleitzahl,telefonnummer,beraterID)
         {
             this.kre = kre;
         }
