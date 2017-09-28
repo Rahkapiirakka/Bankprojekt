@@ -16,6 +16,5 @@
         <ListBox x:Name="BeraterAuswahl_Copy" Height="235" Margin="303,32,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="164"/>
         <Label x:Name="label" Content="Kunden des Beraters" HorizontalAlignment="Left" Margin="303,6,0,0" VerticalAlignment="Top" Width="164"/>
 
->>>>>>> 13c48a5d114980cc4b566457f542290ae6deff0d
     </Grid>
 </Window>
