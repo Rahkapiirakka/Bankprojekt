@@ -18,10 +18,17 @@ namespace Bank_Klassenbibliothek
 
         private List<Konto> Konten;
 
-        public Kunde(string name, string vorname, int kundennummer, List<Konto> Konten) :base(name, vorname)
+
+        public Kunde(string name, string vorname, int kundennummer) :base(name, vorname)
         {
             this.kundennummer = kundennummer;
             this.Konten = new List<Konto>();
         }
+
+        public void KontoErstellen(int iban)
+        {
+            Konten.Add(new Konto(iban, 0.00));
+        }
     }
 }
+

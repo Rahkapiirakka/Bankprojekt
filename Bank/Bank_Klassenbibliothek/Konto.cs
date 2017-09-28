@@ -15,9 +15,9 @@ namespace Bank_Klassenbibliothek
          ********************************/
 
         // Variable & Eigenschaften für die IBAN
-        private string iban;
+        private int iban;
 
-        public string IBAN
+        public int IBAN
         {
             get { return iban; }
             set { iban = value; }
@@ -43,19 +43,11 @@ namespace Bank_Klassenbibliothek
         ******************************/
 
         // Konstruktor der Klasse
-        public Konto(string iban, double ktostd)
+        public Konto(int iban, double ktostd)
         {
             this.iban = iban;
             this.kontostand = ktostd;
         }
-
-
-        // Funktion: Erstellen eines Kontos 
-        public void KontoErstellen()
-        {
-            // ...
-        }
-
 
         // Funktion
 

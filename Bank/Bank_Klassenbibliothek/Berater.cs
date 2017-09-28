@@ -18,9 +18,8 @@ namespace Bank_Klassenbibliothek
 
         private List<Kunde> Kunden;
 
-        public Berater(string name, string vorname, int beraterID, List<Kunde> Kunden) : base(name, vorname)
+        public Berater(string name, string vorname) : base(name, vorname)
         {
-            this.beraterID = beraterID;
             this.Kunden = new List<Kunde>(); 
         }
     }
