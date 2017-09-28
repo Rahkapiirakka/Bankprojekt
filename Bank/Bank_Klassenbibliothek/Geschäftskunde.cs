@@ -15,9 +15,9 @@ namespace Bank_Klassenbibliothek
             get { return bonität; }
             set { bonität = value; }
         }
-        Geschäftskunde(string name, string vorname, DateTime geburtsdatum, string straße, string hausnummer, string stadt, string postleitzahl, string telefonnummer,string kundennummer,Berater ber, Konto kon,Boolean bonität):base(name,vorname,geburtsdatum,straße,hausnummer,stadt,postleitzahl,telefonnummer,kundennummer,ber,kon)
+        Geschäftskunde(string name, string vorname, int kundennummer, List<Konto> Konten, Boolean bonität) : base(name, vorname, kundennummer, Konten)
         {
-
+            this.bonität = bonität;
         }
     }
 }
