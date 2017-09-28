@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bank_Klassenbibliothek
 {
-    class Geschäftskunde:Kunde
+    public class Geschäftskunde:Kunde
     {
         private Boolean bonität;
 
@@ -15,7 +15,8 @@ namespace Bank_Klassenbibliothek
             get { return bonität; }
             set { bonität = value; }
         }
-        Geschäftskunde(string name, string vorname, int kundennummer, List<Konto> Konten, Boolean bonität) : base(name, vorname, kundennummer, Konten)
+
+        public Geschäftskunde(string name, string vorname, int kundennummer, Boolean bonität) : base(name, vorname, kundennummer)
         {
             this.bonität = bonität;
         }
