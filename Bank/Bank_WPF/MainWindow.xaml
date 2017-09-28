@@ -6,11 +6,16 @@
         xmlns:local="clr-namespace:Bank_WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+<<<<<<< HEAD
+    <Grid>
+        <ListBox HorizontalAlignment="Left" Height="100" Margin="242,155,0,0" VerticalAlignment="Top" Width="100"/>
+=======
     <Grid>
         <Button x:Name="NeuerKunde" Content="Neuer Kunde" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="Auto" Click="NeuerKunde_Click"/>
         <Button x:Name="NeuerGeschäftskunde" Content="Neuer Geschäftskunde" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="Auto" Click="NeuerGeschäftskunde_Click"/>
         <Button x:Name="NeuerBerater" Content="Neuer Berater" HorizontalAlignment="Left" Margin="10,80,0,0" VerticalAlignment="Top" Width="Auto" Click="NeuerBerater_Click"/>
         <Button x:Name="NeuerGKBerater" Content="Neuer Geschäftskundenberater" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Width="Auto" Click="NeuerGKBerater_Click"/>
 
+>>>>>>> 13c48a5d114980cc4b566457f542290ae6deff0d
     </Grid>
 </Window>
