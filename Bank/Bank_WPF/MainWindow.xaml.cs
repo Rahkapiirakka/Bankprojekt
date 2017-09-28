@@ -24,5 +24,40 @@ namespace Bank_WPF
         {
             InitializeComponent();
         }
+
+        // 
+        /****************************************************
+        **                                                 **
+        **  buttonOnClick-Methoden der MainWindow.xaml.cs  **
+        **                                                 **
+        ****************************************************/
+
+        // Neuen Kunden erstellen
+        private void NeuerKunde_Click(object sender, RoutedEventArgs e)
+        {
+            KundeErstellen NeuerKunde = new KundeErstellen();
+            NeuerKunde.ShowDialog();
+        }
+
+        // Neuen Gescshäftskunden erstellen
+        private void NeuerGeschäftskunde_Click(object sender, RoutedEventArgs e)
+        {
+            GeschäftskundeErstellen NeuerGK = new GeschäftskundeErstellen();
+            NeuerGK.ShowDialog();
+        }
+
+        // Neuen Berater erstellen
+        private void NeuerBerater_Click(object sender, RoutedEventArgs e)
+        {
+            BeraterErstellen NeuerBerater = new BeraterErstellen();
+            NeuerBerater.ShowDialog();
+        }
+
+        // Neuen Geschäftskundenberater erstellen
+        private void NeuerGKBerater_Click(object sender, RoutedEventArgs e)
+        {
+            GKBeraterErstellen NeuerGKBerater = new GKBeraterErstellen();
+            NeuerGKBerater.ShowDialog();
+        }
     }
 }
