@@ -54,6 +54,22 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Page Include="BeraterErstellen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GeschäftskundeErstellen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GKBeraterErstellen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KundeErstellen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -61,6 +77,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BeraterErstellen.xaml.cs">
+      <DependentUpon>BeraterErstellen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GeschäftskundeErstellen.xaml.cs">
+      <DependentUpon>GeschäftskundeErstellen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GKBeraterErstellen.xaml.cs">
+      <DependentUpon>GKBeraterErstellen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="KundeErstellen.xaml.cs">
+      <DependentUpon>KundeErstellen.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
