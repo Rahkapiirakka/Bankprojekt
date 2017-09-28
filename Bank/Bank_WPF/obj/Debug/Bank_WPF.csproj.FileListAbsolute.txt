@@ -1,0 +1,16 @@
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\bin\Debug\Bank_WPF.exe.config
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\bin\Debug\Bank_WPF.exe
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\bin\Debug\Bank_WPF.pdb
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Bank_WPF.csprojResolveAssemblyReference.cache
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\MainWindow.g.cs
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\App.g.cs
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Bank_WPF_MarkupCompile.cache
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Bank_WPF_MarkupCompile.lref
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\MainWindow.baml
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Bank_WPF.g.resources
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Bank_WPF.Properties.Resources.resources
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Bank_WPF.csproj.GenerateResource.Cache
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Bank_WPF.exe
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Bank_WPF.pdb
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Window1.g.cs
+C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Window1.baml
