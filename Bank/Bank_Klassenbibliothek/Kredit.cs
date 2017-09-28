@@ -52,8 +52,8 @@ namespace Bank_Klassenbibliothek
 
 	    public int Knr
 	    {
-		    get { return kundennummer;}
-		    set { kundennummer = value;}
+		    get { return knr;}
+		    set { knr = value;}
 	    }
 
 
