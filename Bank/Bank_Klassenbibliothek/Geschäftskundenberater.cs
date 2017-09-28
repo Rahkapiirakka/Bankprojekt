@@ -10,9 +10,12 @@ namespace Bank_Klassenbibliothek
     {
         private List<Kredit> kre;
 
-        Geschäftskundenberater(string name, string vorname, int beraterID, List<Kredit> kre) :base(name, vorname, beraterID)
+        private List<Geschäftskunde> GKunden;
+
+        Geschäftskundenberater(string name, string vorname, int beraterID, List<Kredit> kre, List<Geschäftskunde> GKunden) :base(name, vorname, beraterID)
         {
-            this.kre = new List<Kredit>(); 
+            this.kre = new List<Kredit>();
+            this.GKunden = new List<Geschäftskunde>();
         }
     }
 }
