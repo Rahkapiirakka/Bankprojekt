@@ -54,48 +54,68 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="BeraterErstellen.xaml">
+    <Page Include="Berater_Kunden_Auswahl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GeschäftskundeErstellen.xaml">
+    <Page Include="Form_BeraterErstellen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GKBeraterErstellen.xaml">
+    <Page Include="Form_GeldAuszahlen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="KundeErstellen.xaml">
+    <Page Include="Form_GeldEinzahlen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Form_KontoErstellen.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Form_KundenErstellen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Geschäft_Kontoübersicht.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BeraterErstellen.xaml.cs">
-      <DependentUpon>BeraterErstellen.xaml</DependentUpon>
+    <Compile Include="Berater_Kunden_Auswahl.xaml.cs">
+      <DependentUpon>Berater_Kunden_Auswahl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GeschäftskundeErstellen.xaml.cs">
-      <DependentUpon>GeschäftskundeErstellen.xaml</DependentUpon>
+    <Compile Include="Form_BeraterErstellen.xaml.cs">
+      <DependentUpon>Form_BeraterErstellen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GKBeraterErstellen.xaml.cs">
-      <DependentUpon>GKBeraterErstellen.xaml</DependentUpon>
+    <Compile Include="Form_GeldAuszahlen.xaml.cs">
+      <DependentUpon>Form_GeldAuszahlen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="KundeErstellen.xaml.cs">
-      <DependentUpon>KundeErstellen.xaml</DependentUpon>
+    <Compile Include="Form_GeldEinzahlen.xaml.cs">
+      <DependentUpon>Form_GeldEinzahlen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
+    <Compile Include="Form_KontoErstellen.xaml.cs">
+      <DependentUpon>Form_KontoErstellen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Form_KundenErstellen.xaml.cs">
+      <DependentUpon>Form_KundenErstellen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Geschäft_Kontoübersicht.xaml.cs">
+      <DependentUpon>Geschäft_Kontoübersicht.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Privat_Kontenübersicht.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Privat_Kontenübersicht.xaml.cs">
+      <DependentUpon>Privat_Kontenübersicht.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -121,6 +141,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bank_Klassenbibliothek\Bank_Klassenbibliothek.csproj">
+      <Project>{f3336a9a-9d77-48f7-99fc-afb04c513515}</Project>
+      <Name>Bank_Klassenbibliothek</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

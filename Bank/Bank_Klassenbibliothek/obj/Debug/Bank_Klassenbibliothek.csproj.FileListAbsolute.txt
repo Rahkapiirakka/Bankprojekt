@@ -1,1 +1,7 @@
 C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_Klassenbibliothek\obj\Debug\Bank_Klassenbibliothek.csprojResolveAssemblyReference.cache
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Klassenbibliothek\bin\Debug\Bank_Klassenbibliothek.dll
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Klassenbibliothek\bin\Debug\Bank_Klassenbibliothek.pdb
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Klassenbibliothek\obj\Debug\Bank_Klassenbibliothek.csprojResolveAssemblyReference.cache
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Klassenbibliothek\obj\Debug\Bank_Klassenbibliothek.csproj.CoreCompileInputs.cache
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Klassenbibliothek\obj\Debug\Bank_Klassenbibliothek.dll
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Klassenbibliothek\obj\Debug\Bank_Klassenbibliothek.pdb
