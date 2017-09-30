@@ -54,48 +54,33 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="BeraterErstellen.xaml">
+    <Page Include="Berater_Kunden_Auswahl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="GeschäftskundeErstellen.xaml">
+    <Page Include="Geschäft_Kontoübersicht.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="GKBeraterErstellen.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="KundeErstellen.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="BeraterErstellen.xaml.cs">
-      <DependentUpon>BeraterErstellen.xaml</DependentUpon>
+    <Compile Include="Berater_Kunden_Auswahl.xaml.cs">
+      <DependentUpon>Berater_Kunden_Auswahl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GeschäftskundeErstellen.xaml.cs">
-      <DependentUpon>GeschäftskundeErstellen.xaml</DependentUpon>
+    <Compile Include="Geschäft_Kontoübersicht.xaml.cs">
+      <DependentUpon>Geschäft_Kontoübersicht.xaml</DependentUpon>
     </Compile>
-    <Compile Include="GKBeraterErstellen.xaml.cs">
-      <DependentUpon>GKBeraterErstellen.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="KundeErstellen.xaml.cs">
-      <DependentUpon>KundeErstellen.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MainWindow.xaml.cs">
-      <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
+    <Page Include="Privat_Kontenübersicht.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Privat_Kontenübersicht.xaml.cs">
+      <DependentUpon>Privat_Kontenübersicht.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -122,6 +107,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

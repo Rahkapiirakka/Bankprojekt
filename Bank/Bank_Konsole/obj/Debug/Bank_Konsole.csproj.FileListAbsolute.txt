@@ -2,3 +2,12 @@ c:\users\user\documents\visual studio 2015\Projects\Bank\Bank_Konsole\bin\Debug\
 C:\Users\User\Desktop\Bank\Bank_Konsole\bin\Debug\Bank_Konsole.exe.config
 C:\Users\User\Source\Repos\Bankprojekt\Bank\Bank_Konsole\bin\Debug\Bank_Konsole.exe.config
 C:\Users\User\Desktop\Bankprojekt\Bank\Bank_Konsole\bin\Debug\Bank_Konsole.exe.config
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Konsole\bin\Debug\Bank_Konsole.exe.config
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Konsole\bin\Debug\Bank_Konsole.exe
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Konsole\bin\Debug\Bank_Konsole.pdb
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Konsole\bin\Debug\Bank_Klassenbibliothek.dll
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Konsole\bin\Debug\Bank_Klassenbibliothek.pdb
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Konsole\obj\Debug\Bank_Konsole.csprojResolveAssemblyReference.cache
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Konsole\obj\Debug\Bank_Konsole.csproj.CoreCompileInputs.cache
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Konsole\obj\Debug\Bank_Konsole.exe
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_Konsole\obj\Debug\Bank_Konsole.pdb
