@@ -18,9 +18,9 @@
                     </Grid.ColumnDefinitions>
                     <ListBox Margin="0,30,10,50" Grid.Column="1"/>
                     <ListBox Margin="0,30,10,50" Grid.Column="3" Grid.ColumnSpan="2"/>
-                    <Button Content="Neuer Berater" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,10" Width="90" Height="30" VerticalAlignment="Bottom"/>
+                    <Button Content="Neuer Berater" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,10" Width="90" Height="30" VerticalAlignment="Bottom" Click="Button_Click_BeraterErstellen"/>
                     <Button Content="Neuer Kunde" Grid.Column="3" HorizontalAlignment="Left" Margin="0,0,0,10" Width="95" Height="30" VerticalAlignment="Bottom"/>
-                    <Button Content="Kunde bearbeiten" Grid.Column="3" Margin="110,0,0,10" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="110" Click="Button_Click"/>
+                    <Button Content="Kunde bearbeiten" Grid.Column="3" Margin="110,0,0,10" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="110" Click="Button_Click_KundeBearbeiten"/>
                     <Label Content="Berater auswählen" Grid.Column="1" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="26" Width="107"/>
                     <Label Content="Kunde auswählen" Grid.Column="3" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="26" Width="102" Grid.ColumnSpan="2"/>
                 </Grid>
@@ -35,9 +35,9 @@
                     </Grid.ColumnDefinitions>
                     <ListBox Margin="0,30,10,50" Grid.Column="1"/>
                     <ListBox Margin="0,30,10,50" Grid.Column="3" Grid.ColumnSpan="2"/>
-                    <Button Content="Neuer Berater" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,10" Width="90" Height="30" VerticalAlignment="Bottom"/>
+                    <Button Content="Neuer Berater" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,10" Width="90" Height="30" VerticalAlignment="Bottom" Click="Button_Click_GKBeraterErstellen"/>
                     <Button Content="Neuer Kunde" Grid.Column="3" HorizontalAlignment="Left" Margin="0,0,0,10" Width="95" Height="30" VerticalAlignment="Bottom"/>
-                    <Button Content="Kunde bearbeiten" Grid.Column="3" Margin="110,0,0,10" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="110" Click="Button_Click_1"/>
+                    <Button Content="Kunde bearbeiten" Grid.Column="3" Margin="110,0,0,10" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="110" Click="Button_Click_GKundenBearbeiten"/>
                     <Label Content="Berater auswählen" Grid.Column="1" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="26" Width="107"/>
                     <Label Content="Kunde auswählen" Grid.Column="3" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="26" Width="102" Grid.ColumnSpan="2"/>
                 </Grid>

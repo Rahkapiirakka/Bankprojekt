@@ -39,3 +39,15 @@ C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Privat_Kontenüb
 C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Berater_Kunden_Auswahl.baml
 C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Geschäft_Kontoübersicht.baml
 C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Privat_Kontenübersicht.baml
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Form_BeraterErstellen.g.cs
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Form_GeldAuszahlen.g.cs
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Form_GeldEinzahlen.g.cs
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Form_KontoErstellen.g.cs
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Form_KundenErstellen.g.cs
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Form_BeraterErstellen.baml
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Form_GeldAuszahlen.baml
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Form_GeldEinzahlen.baml
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Form_KontoErstellen.baml
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Form_KundenErstellen.baml
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\bin\Debug\Bank_Klassenbibliothek.dll
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\bin\Debug\Bank_Klassenbibliothek.pdb
