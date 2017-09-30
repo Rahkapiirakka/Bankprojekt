@@ -12,7 +12,7 @@ namespace Bank_Klassenbibliothek
 
         private List<Geschäftskunde> GKunden;
 
-        Geschäftskundenberater(string name, string vorname) : base(name, vorname)
+        public Geschäftskundenberater(string name, string vorname) : base(name, vorname)
         {
             this.kre = new List<Kredit>();
             this.GKunden = new List<Geschäftskunde>();

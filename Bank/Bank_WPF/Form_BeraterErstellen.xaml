@@ -7,11 +7,11 @@
         mc:Ignorable="d"
         Title="Form_BeraterErstellen" Height="200" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBox Height="23" Margin="20,32,20,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBox Height="23" Margin="20,82,20,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <Button Content="Erstellen" Margin="110,0,110,10" Height="30" VerticalAlignment="Bottom" Click="Button_Click"/>
-        <Label Content="Vorname" HorizontalAlignment="Left" Margin="16,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Nachname" HorizontalAlignment="Left" Margin="16,60,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtb_Vorname" Height="23" Margin="20,32,20,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtb_Nachname" Height="23" Margin="20,82,20,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <Button x:Name="btn_Erstellen" Content="Erstellen" Margin="110,0,110,10" Height="30" VerticalAlignment="Bottom" Click="Button_Click"/>
+        <Label x:Name="lbl_Vorname" Content="Vorname" HorizontalAlignment="Left" Margin="16,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbl_Nachname" Content="Nachname" HorizontalAlignment="Left" Margin="16,60,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

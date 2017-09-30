@@ -20,12 +20,18 @@ namespace Bank_WPF
     /// </summary>
     public partial class Berater_Kunden_Auswahl : Window
     {
+        Bank Sparbank; 
+
         public Berater_Kunden_Auswahl()
         {
-            Bank Sparbank = new Bank();
-            InitializeComponent();
-        }
+            if (Sparbank == null)
+            {
+                Sparbank = new Bank();
+            }
 
+            InitializeComponent();
+            List_GBerater.ItemsSource = Sparbank.Ber;
+        }
 
         // Tab Privatkunde
 
@@ -33,20 +39,25 @@ namespace Bank_WPF
         {
             Window Win_PKÜ = new Privat_Kontenübersicht();
             Win_PKÜ.ShowDialog();
+            
         }
 
         private void Button_Click_BeraterErstellen(object sender, RoutedEventArgs e)
         {
-            Window Win_KBeraterErstellen = new Form_BeraterErstellen(false);
+            Window Win_KBeraterErstellen = new Form_BeraterErstellen(false, Sparbank);
             Win_KBeraterErstellen.ShowDialog();
+            
         }
 
         // Tab Geschäftskunde
 
         private void Button_Click_GKBeraterErstellen(object sender, RoutedEventArgs e)
         {
-            Window Win_GKBeraterErstellen = new Form_BeraterErstellen(true);
+            Window Win_GKBeraterErstellen = new Form_BeraterErstellen(true, Sparbank);
             Win_GKBeraterErstellen.ShowDialog();
+            List_GBerater.ItemsSource = null;
+            List_GBerater.ItemsSource = Sparbank.Ber;
+
         }
 
         private void Button_Click_GKundenBearbeiten(object sender, RoutedEventArgs e)

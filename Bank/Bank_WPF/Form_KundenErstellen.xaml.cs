@@ -19,8 +19,17 @@ namespace Bank_WPF
     /// </summary>
     public partial class Form_KundenErstellen : Window
     {
-        public Form_KundenErstellen()
+        private Boolean istGK;
+
+        public Boolean IstGK
         {
+            get { return istGK; }
+            set { istGK = value; }
+        }
+
+        public Form_KundenErstellen(Boolean istGK)
+        {
+            this.istGK = istGK;
             InitializeComponent();
         }
     }

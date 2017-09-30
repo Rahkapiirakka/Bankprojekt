@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Bank_Klassenbibliothek;
 
 namespace Bank_WPF
 {
@@ -19,28 +20,42 @@ namespace Bank_WPF
     /// </summary>
     public partial class Form_BeraterErstellen : Window
     {
-        private Boolean istGK;
+        private Boolean istGKB;
 
-        public Boolean IstGK
+        public Boolean IstGKB
         {
-            get { return istGK; }
-            set { istGK = value; }
+            get { return istGKB; }
+            set { istGKB = value; }
         }
 
-        public Form_BeraterErstellen(Boolean istGK)
+        private Bank bankInstanz;
+
+        public Bank Bankinstanz
         {
+            get { return bankInstanz; }
+            set { bankInstanz = value; }
+        }
+
+
+        public Form_BeraterErstellen(Boolean istGKB, Bank bankInstanz)
+        {
+            this.bankInstanz = bankInstanz;
+            this.istGKB = istGKB;
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (istGK == true)
+            if (istGKB == true)
             {
-                //Geschäftskunde erstellen
+                
+                bankInstanz.GKBeraterErstellen(txtb_Nachname.Text, txtb_Vorname.Text);
+                this.Close();
             }
             else
             {
-                //Kunde erstellen
+                bankInstanz.BeraterErstellen(txtb_Nachname.Text, txtb_Vorname.Text);
+                this.Close();
             }
         }
     }
