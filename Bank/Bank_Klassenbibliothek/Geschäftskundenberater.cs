@@ -30,9 +30,9 @@ namespace Bank_Klassenbibliothek
             this.GKunden = new List<Geschäftskunde>();
         }
 
-        public void KreditErstellen(int kreditID, double summe, double zins, DateTime start, DateTime ende, int knr)
+        public void KreditErstellen(double summe, double zins, DateTime start, DateTime ende, int knr)
         {
-            kre.Add(new Kredit(kreditID, summe, zins, start, ende, knr));
+            kre.Add(new Kredit(summe, zins, start, ende, knr));
         }
 
         public void GKundeErstellen(string name, string vorname, int kundennummer)

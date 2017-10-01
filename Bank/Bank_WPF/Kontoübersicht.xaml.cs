@@ -112,5 +112,11 @@ namespace Bank_WPF
                 Win_GeldAbheben.ShowDialog();
             }
         }
+
+        private void Button_Click_KreditBeantragen(object sender, RoutedEventArgs e)
+        {
+            Window Win_KreditBeantragen = new Form_Kreditbeantragen(gberaterInstanz);
+            Win_KreditBeantragen.ShowDialog();
+        }
     }
 }

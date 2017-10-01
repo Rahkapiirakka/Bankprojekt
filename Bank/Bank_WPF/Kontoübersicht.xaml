@@ -10,7 +10,20 @@
         <TabControl Margin="10,10,10,10">
             <TabItem x:Name="tab_Konten" Header="Konten">
                 <Grid Background="#FFE5E5E5">
-                    <ListBox x:Name="List_Konten" Margin="10,10,170,10"/>
+                    <ListBox x:Name="List_Konten" Margin="10,10,170,10">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="0,2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Text="{Binding iban}" />
+                                    <TextBlock Text="{Binding kontostand}" Grid.Column="1"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
                     <Button x:Name="btn_KontoErstellen" Content="Konto erstellen" HorizontalAlignment="Right" Margin="0,10,20,0" VerticalAlignment="Top" Height="30" Width="130" Grid.RowSpan="2" Click="Button_Click_KontoErstellen"/>
                     <Button x:Name="btn_GeldEinzahlen" Content="Geld einzahlen" HorizontalAlignment="Right" Margin="0,50,20,0" VerticalAlignment="Top" Height="30" Width="130" Grid.RowSpan="2" Click="Button_Click_GeldEinzahlen"/>
                     <Button x:Name="btn_GeldAuszahlen" Content="Geld abheben" HorizontalAlignment="Right" Margin="0,90,20,0" VerticalAlignment="Top" Height="30" Width="130" Grid.RowSpan="2" Click="Button_Click_GeldAbheben"/>
@@ -18,8 +31,25 @@
             </TabItem>
             <TabItem x:Name="tab_Kredite" Header="Kredite">
                 <Grid Background="#FFE5E5E5">
-                    <ListBox x:Name="List_Kredite" Margin="10,10,170,10"/>
-                    <Button Content="Kredit beantragen" HorizontalAlignment="Right" Margin="0,10,20,0" VerticalAlignment="Top" Height="30" Width="130" Grid.RowSpan="2"/>
+                    <ListBox x:Name="List_Kredite" Margin="10,10,170,10" Grid.ColumnSpan="3">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="0,2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Margin="0,0,3,0" Text="{Binding Summe}" />
+                                    <TextBlock Margin="0,0,3,0" Text="{Binding Zins}" Grid.Column="1"/>
+                                    <TextBlock Margin="0,0,3,0" Text="{Binding Start}" Grid.Column="2"/>
+                                    <TextBlock Margin="0,0,3,0" Text="{Binding Ende}" Grid.Column="3"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                    <Button Content="Kredit beantragen" HorizontalAlignment="Right" Margin="0,10,20,0" VerticalAlignment="Top" Height="30" Width="130" Grid.Column="2" Click="Button_Click_KreditBeantragen"/>
                 </Grid>
             </TabItem>
         </TabControl>

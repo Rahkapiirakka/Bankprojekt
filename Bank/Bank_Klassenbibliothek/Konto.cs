@@ -43,10 +43,10 @@ namespace Bank_Klassenbibliothek
         ******************************/
 
         // Konstruktor der Klasse
-        public Konto(int iban, double ktostd)
+        public Konto(int iban, double kontostand)
         {
             this.iban = iban;
-            this.kontostand = ktostd;
+            this.kontostand = kontostand;
         }
 
         // Funktion

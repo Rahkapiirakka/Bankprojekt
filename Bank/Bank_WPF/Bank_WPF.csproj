@@ -74,6 +74,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Form_Kreditbeantragen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Form_KundenErstellen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -100,6 +104,9 @@
     </Compile>
     <Compile Include="Form_KontoErstellen.xaml.cs">
       <DependentUpon>Form_KontoErstellen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Kreditbeantragen.xaml.cs">
+      <DependentUpon>Form_Kreditbeantragen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Form_KundenErstellen.xaml.cs">
       <DependentUpon>Form_KundenErstellen.xaml</DependentUpon>

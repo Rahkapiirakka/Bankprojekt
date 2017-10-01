@@ -8,14 +8,6 @@ namespace Bank_Klassenbibliothek
 {
     public class Kredit
     {
-        private int kreditID;
-
-        public int KreditID
-        {
-            get { return kreditID; }
-            set { kreditID = value; }
-        }
-
         private double summe;
 
         public double Summe
@@ -57,9 +49,8 @@ namespace Bank_Klassenbibliothek
 	    }
 
 
-        public Kredit (int kreditID, double summe, double zins, DateTime start, DateTime ende, int knr)
+        public Kredit (double summe, double zins, DateTime start, DateTime ende, int knr)
         {
-            this.kreditID = kreditID;
             this.summe = summe;
             this.zins = zins;
             this.start = start;
