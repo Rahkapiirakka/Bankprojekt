@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Bank_Klassenbibliothek;
 
 namespace Bank_WPF
 {
@@ -19,6 +20,7 @@ namespace Bank_WPF
     /// </summary>
     public partial class Form_GeldEinzahlen : Window
     {
+
         public Form_GeldEinzahlen()
         {
             InitializeComponent();

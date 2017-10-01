@@ -31,15 +31,16 @@ namespace Bank_WPF
                 Sparbank = new Bank();
             }
 
-            Sparbank.Ber.Add(new Berater ("Felix", "Meurer"));
+            Sparbank.Ber.Add(new Berater("Meurer", "Felix"));
             List_Berater.ItemsSource = Sparbank.Ber;
+            List_GBerater.ItemsSource = Sparbank.GKBer;
         }
 
         // Tab Privatkunde
 
         private void Button_Click_KundeBearbeiten(object sender, RoutedEventArgs e)
         {
-            Window Win_PKÜ = new Geschäft_Kontoübersicht(false);
+            Window Win_PKÜ = new Geschäft_Kontoübersicht(false, Sparbank.Ber[List_Berater.SelectedIndex].Kunden[List_Kunden.SelectedIndex]);
             Win_PKÜ.ShowDialog();
         }
 
@@ -65,7 +66,7 @@ namespace Bank_WPF
 
         private void Button_Click_GKundenBearbeiten(object sender, RoutedEventArgs e)
         {
-            Window Win_GKÜ = new Geschäft_Kontoübersicht(true);
+            Window Win_GKÜ = new Geschäft_Kontoübersicht(true, Sparbank.GKBer[List_GBerater.SelectedIndex].GKunden[List_GKunden.SelectedIndex]);
             Win_GKÜ.ShowDialog();
         }
 

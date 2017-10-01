@@ -16,11 +16,17 @@ namespace Bank_Klassenbibliothek
             set { beraterID = value; }
         }
 
-        private List<Kunde> Kunden;
+        private List<Kunde> kunden;
+
+        public List<Kunde> Kunden       
+        {
+            get { return kunden; }
+            set { kunden = value; }
+        }
 
         public Berater(string name, string vorname) : base(name, vorname)
         {
-            this.Kunden = new List<Kunde>(); 
+            this.kunden = new List<Kunde>(); 
         }
 
         public void KundeErstellen(string name, string vorname, int kundennummer)
