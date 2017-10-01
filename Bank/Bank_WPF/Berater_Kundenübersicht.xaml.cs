@@ -66,7 +66,7 @@ namespace Bank_WPF
 
         private void Button_Click_GKundenBearbeiten(object sender, RoutedEventArgs e)
         {
-            Window Win_GKÜ = new Kontoübersicht(true, Sparbank.GKBer[List_GBerater.SelectedIndex].GKunden[List_GKunden.SelectedIndex]);
+            Window Win_GKÜ = new Kontoübersicht(true, Sparbank.GKBer[List_GBerater.SelectedIndex].GKunden[List_GKunden.SelectedIndex], Sparbank.GKBer[List_GBerater.SelectedIndex]);
             Win_GKÜ.ShowDialog();
         }
 

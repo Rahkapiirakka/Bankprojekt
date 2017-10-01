@@ -16,8 +16,14 @@ namespace Bank_Klassenbibliothek
             set { kundennummer = value; }
         }
 
-        private List<Konto> Konten;
 
+        private List<Konto> konten;
+
+        public List<Konto> Konten
+        {
+            get { return konten; }
+            set { konten = value; }
+        }
 
         public Kunde(string name, string vorname, int kundennummer) :base(name, vorname)
         {

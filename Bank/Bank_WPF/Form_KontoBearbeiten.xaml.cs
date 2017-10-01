@@ -28,9 +28,53 @@ namespace Bank_WPF
             set { einzahlen = value; }
         }
 
-        public Form_KontoBearbeiten()
+        private Konto kontoInstanz;
+
+        public Konto KontoInstanz
+        {
+            get { return kontoInstanz; }
+            set { kontoInstanz = value; }
+        }
+
+        public Form_KontoBearbeiten(Boolean einzahlen, Konto kontoInstanz)
         {
             InitializeComponent();
+            this.einzahlen = einzahlen;
+            this.kontoInstanz = kontoInstanz;
+
+            if (einzahlen == true)
+            {
+                lbl_BetragÄndern.Content = "Betrag einzahlen";
+                lbl_VerfügbaresGuthZahl.Content = kontoInstanz.Kontostand;
+                btn_Bearbeiten.Content = "Einzahlen";
+
+            }
+            else
+            {
+                lbl_BetragÄndern.Content = "Gewünschter Betrag";
+                lbl_VerfügbaresGuthZahl.Content = kontoInstanz.Kontostand;
+                btn_Bearbeiten.Content = "Auszahlen";
+            }
+        }
+
+        private void Button_Click_BetragÄndern(object sender, RoutedEventArgs e)
+        {
+            if (einzahlen == true)
+            {
+                kontoInstanz.Kontostand = kontoInstanz.Kontostand + Convert.ToDouble(txtb_BetragÄndern.Text);
+            }
+            else
+            {
+                if (Convert.ToDouble(txtb_BetragÄndern.Text) > kontoInstanz.Kontostand)
+                {
+                    Window Win_Benachrichtigung = new Benachrichtigungen("Der gewünschte Betrag übersteigt den verfügbaren Betrag auf dem Konto.");
+                    Win_Benachrichtigung.ShowDialog();
+                }
+                else
+                {
+                    kontoInstanz.Kontostand = kontoInstanz.Kontostand - Convert.ToDouble(txtb_BetragÄndern.Text);
+                }
+            }
         }
     }
 }

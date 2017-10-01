@@ -15,13 +15,24 @@ using System.Windows.Shapes;
 namespace Bank_WPF
 {
     /// <summary>
-    /// Interaktionslogik für Form_GeldAuszahlen.xaml
+    /// Interaktionslogik für Benachrichtigungen.xaml
     /// </summary>
-    public partial class Form_GeldAuszahlen : Window
+    public partial class Benachrichtigungen : Window
     {
-        public Form_GeldAuszahlen()
+        private string text;
+
+        public string Text
+        {
+            get { return text; }
+            set { text = value; }
+        }
+
+        public Benachrichtigungen(string text)
         {
             InitializeComponent();
+            this.text = text;
+
+            txtbl_Benachrichtigung.Text = text;
         }
     }
 }

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Bank_Klassenbibliothek;
 
 namespace Bank_WPF
 {
@@ -19,9 +20,29 @@ namespace Bank_WPF
     /// </summary>
     public partial class Form_KontoErstellen : Window
     {
-        public Form_KontoErstellen()
+        private Kunde kundenInstanz;
+
+        public Kunde KundenInstanz
+        {
+            get { return kundenInstanz; }
+            set { kundenInstanz = value; }
+        }
+
+        public Form_KontoErstellen(Kunde kundenInstanz)
         {
             InitializeComponent();
+            this.kundenInstanz = kundenInstanz;
+        }
+
+        private void Button_Click_KontoErstellen(object sender, RoutedEventArgs e)
+        {
+            // Kontonummerzuweisung
+            kundenInstanz.KontoErstellen(1);
+        }
+
+        private void Button_Click_KontoNichtErstellen(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
