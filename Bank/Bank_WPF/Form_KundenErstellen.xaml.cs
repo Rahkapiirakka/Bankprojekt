@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Bank_Klassenbibliothek;
 
 namespace Bank_WPF
 {
@@ -27,10 +28,48 @@ namespace Bank_WPF
             set { istGK = value; }
         }
 
-        public Form_KundenErstellen(Boolean istGK)
+        private Berater beraterInstanz;
+
+        public Berater BeraterInstanz
         {
-            this.istGK = istGK;
+            get { return beraterInstanz; }
+            set { beraterInstanz = value; }
+        }
+
+        private Geschäftskundenberater gberaterInstanz;
+
+        public Geschäftskundenberater GBeraterInstanz
+        {
+            get { return gberaterInstanz; }
+            set { gberaterInstanz = value; }
+        }
+
+        public Form_KundenErstellen(Boolean istGK, Berater beraterInstanz)
+        {
             InitializeComponent();
+            this.istGK = istGK;
+            this.beraterInstanz = beraterInstanz; 
+            Chkb_Bonität.IsEnabled = false;
+        }
+
+        public Form_KundenErstellen(Boolean istGK, Geschäftskundenberater gberaterInstanz)
+        {
+            InitializeComponent();
+            this.istGK = istGK;
+            this.gberaterInstanz = gberaterInstanz;
+            Chkb_Bonität.IsEnabled = true;
+        }
+
+        private void Button_Clicked_KundeErstellen(object sender, RoutedEventArgs e)
+        {
+            if (istGK == true)
+            {
+                this.gberaterInstanz.GKundeErstellen(txtb_KundeNachname.Text, txtb_KundeVorname.Text, Convert.ToInt32(txtb_Kundennummer.Text));
+            }
+            else
+            {
+                this.beraterInstanz.KundeErstellen(txtb_KundeNachname.Text, txtb_KundeVorname.Text, Convert.ToInt32(txtb_Kundennummer.Text));
+            }
         }
     }
 }

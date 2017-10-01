@@ -21,23 +21,23 @@ namespace Bank_Klassenbibliothek
         public List<Geschäftskundenberater> GKBer
         {
             get { return gkBer; }
-            set { gker = value; }
+            set { gkBer = value; }
         }
 
         public Bank()
         {
-            this.Ber = new List<Berater>();
-            this.GKBer = new List<Geschäftskundenberater>();
+            this.ber = new List<Berater>();
+            this.gkBer = new List<Geschäftskundenberater>();
         }
 
         public void BeraterErstellen(string name, string vorname)
         {
-            Ber.Add(new Berater(name, vorname));
+            ber.Add(new Berater(name, vorname));
         }
 
         public void GKBeraterErstellen(string name, string vorname)
         {
-            GKBer.Add(new Geschäftskundenberater(name, vorname));
+            gkBer.Add(new Geschäftskundenberater(name, vorname));
         }
     }
 

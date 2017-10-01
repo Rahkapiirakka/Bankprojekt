@@ -107,15 +107,8 @@
     <Compile Include="Geschäft_Kontoübersicht.xaml.cs">
       <DependentUpon>Geschäft_Kontoübersicht.xaml</DependentUpon>
     </Compile>
-    <Page Include="Privat_Kontenübersicht.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Privat_Kontenübersicht.xaml.cs">
-      <DependentUpon>Privat_Kontenübersicht.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -140,7 +133,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Bank_Klassenbibliothek\Bank_Klassenbibliothek.csproj">

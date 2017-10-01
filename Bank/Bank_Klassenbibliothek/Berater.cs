@@ -22,5 +22,10 @@ namespace Bank_Klassenbibliothek
         {
             this.Kunden = new List<Kunde>(); 
         }
+
+        public void KundeErstellen(string name, string vorname, int kundennummer)
+        {
+            Kunden.Add(new Kunde(name, vorname, kundennummer));
+        }
     }
 }

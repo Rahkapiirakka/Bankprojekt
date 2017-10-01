@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Bank_Klassenbibliothek;
 
 namespace Bank_WPF
 {
@@ -19,9 +20,45 @@ namespace Bank_WPF
     /// </summary>
     public partial class Geschäft_Kontoübersicht : Window
     {
-        public Geschäft_Kontoübersicht()
+        private Boolean istGK;
+
+        public Boolean IstGK
+        {
+            get { return istGK; }
+            set { istGK = value; }
+        }
+
+        private Kunde kundenInstanz;
+
+        public Kunde KundenInstanz
+        {
+            get { return kundenInstanz; }
+            set { kundenInstanz = value; }
+        }
+
+        private Geschäftskunde gkundenInstanz;
+
+        public Geschäftskunde GKundenInstanz
+        {
+            get { return gkundenInstanz; }
+            set { gkundenInstanz = value; }
+        }
+
+
+        public Geschäft_Kontoübersicht(Boolean istGK, Kunde kundenInstanz)
         {
             InitializeComponent();
+            this.istGK = istGK;
+            this.kundenInstanz = kundenInstanz;
+            tab_Kredite.IsEnabled = false;
+        }
+
+        public Geschäft_Kontoübersicht(Boolean istGK, Geschäftskunde gkundenInstanz)
+        {
+            InitializeComponent();
+            this.istGK = istGK;
+            this.gkundenInstanz = gkundenInstanz;
+            tab_Kredite.IsEnabled = true;
         }
     }
 }

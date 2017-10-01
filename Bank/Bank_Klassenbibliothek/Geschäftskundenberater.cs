@@ -10,7 +10,19 @@ namespace Bank_Klassenbibliothek
     {
         private List<Kredit> kre;
 
-        private List<Geschäftskunde> GKunden;
+        public List<Kredit> Kre
+        {
+            get { return kre; }
+            set { kre = value; }
+        }
+
+        private List<Geschäftskunde> gKunden;
+
+        public List<Geschäftskunde> GKunden
+        {
+            get { return gKunden; }
+            set { gKunden = value; }
+        }
 
         public Geschäftskundenberater(string name, string vorname) : base(name, vorname)
         {
@@ -24,7 +36,7 @@ namespace Bank_Klassenbibliothek
         }
 
         public void GKundeErstellen(string name, string vorname, int kundennummer)
-        {
+        { 
             GKunden.Add(new Geschäftskunde(name, vorname, kundennummer, true));
         }
     }

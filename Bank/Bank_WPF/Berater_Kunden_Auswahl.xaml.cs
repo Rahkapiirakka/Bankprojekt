@@ -20,33 +20,39 @@ namespace Bank_WPF
     /// </summary>
     public partial class Berater_Kunden_Auswahl : Window
     {
-        Bank Sparbank; 
+
+        Bank Sparbank;
 
         public Berater_Kunden_Auswahl()
         {
+            InitializeComponent();
             if (Sparbank == null)
             {
                 Sparbank = new Bank();
             }
 
-            InitializeComponent();
-            List_GBerater.ItemsSource = Sparbank.Ber;
+            Sparbank.Ber.Add(new Berater ("Felix", "Meurer"));
+            List_Berater.ItemsSource = Sparbank.Ber;
         }
 
         // Tab Privatkunde
 
         private void Button_Click_KundeBearbeiten(object sender, RoutedEventArgs e)
         {
-            Window Win_PKÜ = new Privat_Kontenübersicht();
+            Window Win_PKÜ = new Geschäft_Kontoübersicht(false);
             Win_PKÜ.ShowDialog();
-            
         }
 
         private void Button_Click_BeraterErstellen(object sender, RoutedEventArgs e)
         {
             Window Win_KBeraterErstellen = new Form_BeraterErstellen(false, Sparbank);
             Win_KBeraterErstellen.ShowDialog();
-            
+        }
+
+        private void Button_Click_KundeErstellen(object sender, RoutedEventArgs e)
+        {
+            Window Win_KundeErstellen = new Form_KundenErstellen(false, Sparbank.Ber[List_Berater.SelectedIndex]);
+            Win_KundeErstellen.ShowDialog();
         }
 
         // Tab Geschäftskunde
@@ -55,15 +61,18 @@ namespace Bank_WPF
         {
             Window Win_GKBeraterErstellen = new Form_BeraterErstellen(true, Sparbank);
             Win_GKBeraterErstellen.ShowDialog();
-            List_GBerater.ItemsSource = null;
-            List_GBerater.ItemsSource = Sparbank.Ber;
-
         }
 
         private void Button_Click_GKundenBearbeiten(object sender, RoutedEventArgs e)
         {
-            Window Win_GKÜ = new Geschäft_Kontoübersicht();
+            Window Win_GKÜ = new Geschäft_Kontoübersicht(true);
             Win_GKÜ.ShowDialog();
+        }
+
+        private void Button_Click_GKundenErstellen(object sender, RoutedEventArgs e)
+        {
+            Window Win_GKundeErstellen = new Form_KundenErstellen(true, Sparbank.GKBer[List_GBerater.SelectedIndex]);
+            Win_GKundeErstellen.ShowDialog();
         }
     }
 }
