@@ -16,12 +16,19 @@ using Bank_Klassenbibliothek;
 namespace Bank_WPF
 {
     /// <summary>
-    /// Interaktionslogik für Form_GeldEinzahlen.xaml
+    /// Interaktionslogik für Form_KontoBearbeiten.xaml
     /// </summary>
-    public partial class Form_GeldEinzahlen : Window
+    public partial class Form_KontoBearbeiten : Window
     {
+        private Boolean einzahlen;
 
-        public Form_GeldEinzahlen()
+        public Boolean Einzahlen
+        {
+            get { return einzahlen; }
+            set { einzahlen = value; }
+        }
+
+        public Form_KontoBearbeiten()
         {
             InitializeComponent();
         }

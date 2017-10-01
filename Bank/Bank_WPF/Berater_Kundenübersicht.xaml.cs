@@ -16,14 +16,14 @@ using Bank_Klassenbibliothek;
 namespace Bank_WPF
 {
     /// <summary>
-    /// Interaktionslogik für Berater_Kunden_Auswahl.xaml
+    /// Interaktionslogik für Berater_Kundenübersicht.xaml
     /// </summary>
-    public partial class Berater_Kunden_Auswahl : Window
+    public partial class Berater_Kundenübersicht : Window
     {
 
         Bank Sparbank;
 
-        public Berater_Kunden_Auswahl()
+        public Berater_Kundenübersicht()
         {
             InitializeComponent();
             if (Sparbank == null)
@@ -40,7 +40,7 @@ namespace Bank_WPF
 
         private void Button_Click_KundeBearbeiten(object sender, RoutedEventArgs e)
         {
-            Window Win_PKÜ = new Geschäft_Kontoübersicht(false, Sparbank.Ber[List_Berater.SelectedIndex].Kunden[List_Kunden.SelectedIndex]);
+            Window Win_PKÜ = new Kontoübersicht(false, Sparbank.Ber[List_Berater.SelectedIndex].Kunden[List_Kunden.SelectedIndex]);
             Win_PKÜ.ShowDialog();
         }
 
@@ -66,7 +66,7 @@ namespace Bank_WPF
 
         private void Button_Click_GKundenBearbeiten(object sender, RoutedEventArgs e)
         {
-            Window Win_GKÜ = new Geschäft_Kontoübersicht(true, Sparbank.GKBer[List_GBerater.SelectedIndex].GKunden[List_GKunden.SelectedIndex]);
+            Window Win_GKÜ = new Kontoübersicht(true, Sparbank.GKBer[List_GBerater.SelectedIndex].GKunden[List_GKunden.SelectedIndex]);
             Win_GKÜ.ShowDialog();
         }
 

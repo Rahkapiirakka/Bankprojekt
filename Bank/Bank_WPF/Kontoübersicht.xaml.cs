@@ -16,9 +16,9 @@ using Bank_Klassenbibliothek;
 namespace Bank_WPF
 {
     /// <summary>
-    /// Interaktionslogik für Geschäft_Kontoübersicht.xaml
+    /// Interaktionslogik für Kontoübersicht.xaml
     /// </summary>
-    public partial class Geschäft_Kontoübersicht : Window
+    public partial class Kontoübersicht : Window
     {
         private Boolean istGK;
 
@@ -45,7 +45,7 @@ namespace Bank_WPF
         }
 
 
-        public Geschäft_Kontoübersicht(Boolean istGK, Kunde kundenInstanz)
+        public Kontoübersicht(Boolean istGK, Kunde kundenInstanz)
         {
             InitializeComponent();
             this.istGK = istGK;
@@ -53,7 +53,7 @@ namespace Bank_WPF
             tab_Kredite.IsEnabled = false;
         }
 
-        public Geschäft_Kontoübersicht(Boolean istGK, Geschäftskunde gkundenInstanz)
+        public Kontoübersicht(Boolean istGK, Geschäftskunde gkundenInstanz)
         {
             InitializeComponent();
             this.istGK = istGK;

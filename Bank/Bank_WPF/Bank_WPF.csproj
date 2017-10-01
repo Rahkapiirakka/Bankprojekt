@@ -54,7 +54,7 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="Berater_Kunden_Auswahl.xaml">
+    <Page Include="Berater_Kundenübersicht.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -66,7 +66,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Form_GeldEinzahlen.xaml">
+    <Page Include="Form_KontoBearbeiten.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -78,7 +78,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Geschäft_Kontoübersicht.xaml">
+    <Page Include="Kontoübersicht.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -86,8 +86,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Berater_Kunden_Auswahl.xaml.cs">
-      <DependentUpon>Berater_Kunden_Auswahl.xaml</DependentUpon>
+    <Compile Include="Berater_Kundenübersicht.xaml.cs">
+      <DependentUpon>Berater_Kundenübersicht.xaml</DependentUpon>
     </Compile>
     <Compile Include="Form_BeraterErstellen.xaml.cs">
       <DependentUpon>Form_BeraterErstellen.xaml</DependentUpon>
@@ -95,8 +95,8 @@
     <Compile Include="Form_GeldAuszahlen.xaml.cs">
       <DependentUpon>Form_GeldAuszahlen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Form_GeldEinzahlen.xaml.cs">
-      <DependentUpon>Form_GeldEinzahlen.xaml</DependentUpon>
+    <Compile Include="Form_KontoBearbeiten.xaml.cs">
+      <DependentUpon>Form_KontoBearbeiten.xaml</DependentUpon>
     </Compile>
     <Compile Include="Form_KontoErstellen.xaml.cs">
       <DependentUpon>Form_KontoErstellen.xaml</DependentUpon>
@@ -104,8 +104,8 @@
     <Compile Include="Form_KundenErstellen.xaml.cs">
       <DependentUpon>Form_KundenErstellen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Geschäft_Kontoübersicht.xaml.cs">
-      <DependentUpon>Geschäft_Kontoübersicht.xaml</DependentUpon>
+    <Compile Include="Kontoübersicht.xaml.cs">
+      <DependentUpon>Kontoübersicht.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
