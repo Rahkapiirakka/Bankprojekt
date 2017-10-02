@@ -49,3 +49,5 @@ C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Form_KontoBearbe
 C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Kontoübersicht.baml
 C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Benachrichtigungen.g.cs
 C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Benachrichtigungen.baml
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Form_Kreditbeantragen.g.cs
+C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\obj\Debug\Form_Kreditbeantragen.baml

@@ -65,10 +65,12 @@ namespace Bank_WPF
             if (istGK == true)
             {
                 this.gberaterInstanz.GKundeErstellen(txtb_KundeNachname.Text, txtb_KundeVorname.Text, Convert.ToInt32(txtb_Kundennummer.Text));
+                this.Close();
             }
             else
             {
                 this.beraterInstanz.KundeErstellen(txtb_KundeNachname.Text, txtb_KundeVorname.Text, Convert.ToInt32(txtb_Kundennummer.Text));
+                this.Close();
             }
         }
     }

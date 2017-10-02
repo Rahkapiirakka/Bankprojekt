@@ -16,7 +16,7 @@
                         <ColumnDefinition Width="5*"/>
                         <ColumnDefinition Width="137*"/>
                     </Grid.ColumnDefinitions>
-                    <ListBox x:Name="List_Berater" Margin="0,30,10,50" Grid.Column="1">
+                    <ListBox x:Name="List_Berater" Margin="0,30,10,50" Grid.Column="1" SelectionChanged="Selection_Changed_Berater">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid Margin="0,2">
@@ -30,7 +30,20 @@
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
-                    <ListBox x:Name="List_Kunden" Margin="0,30,10,50" Grid.Column="3" Grid.ColumnSpan="2"/>
+                    <ListBox x:Name="List_Kunden" Margin="0,30,10,50" Grid.Column="3" Grid.ColumnSpan="2">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Margin="0,2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Margin="0,0,3,0" Text="{Binding Vorname}" />
+                                    <TextBlock Margin="0,0,3,0" Text="{Binding Name}" Grid.Column="1" />
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
                     <Button x:Name="btn_NeuerBerater" Content="Neuer Berater" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,10" Width="90" Height="30" VerticalAlignment="Bottom" Click="Button_Click_BeraterErstellen"/>
                     <Button x:Name="btn_NeuerKunde" Content="Neuer Kunde" Grid.Column="3" HorizontalAlignment="Left" Margin="0,0,0,10" Width="95" Height="30" VerticalAlignment="Bottom" Click="Button_Click_KundeErstellen"/>
                     <Button x:Name="btn_Kundebearbeiten" Content="Kunde bearbeiten" Grid.Column="3" Margin="110,0,0,10" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="110" Click="Button_Click_KundeBearbeiten"/>

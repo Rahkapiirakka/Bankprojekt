@@ -48,12 +48,20 @@ namespace Bank_WPF
         {
             Window Win_KBeraterErstellen = new Form_BeraterErstellen(false, Sparbank);
             Win_KBeraterErstellen.ShowDialog();
+            List_Berater.Items.Refresh();
         }
 
         private void Button_Click_KundeErstellen(object sender, RoutedEventArgs e)
         {
             Window Win_KundeErstellen = new Form_KundenErstellen(false, Sparbank.Ber[List_Berater.SelectedIndex]);
             Win_KundeErstellen.ShowDialog();
+            List_Kunden.Items.Refresh();
+        }
+
+        private void Selection_Changed_Berater(object sender, SelectionChangedEventArgs e)
+        {
+            List_Kunden.ItemsSource = Sparbank.Ber[List_Berater.SelectedIndex].Kunden;
+            List_Kunden.Items.Refresh();
         }
 
         // Tab Geschäftskunde
