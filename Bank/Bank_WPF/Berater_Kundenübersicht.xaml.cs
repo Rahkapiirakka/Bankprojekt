@@ -30,8 +30,6 @@ namespace Bank_WPF
             {
                 Sparbank = new Bank();
             }
-
-            Sparbank.Ber.Add(new Berater("Meurer", "Felix"));
             List_Berater.ItemsSource = Sparbank.Ber;
             List_GBerater.ItemsSource = Sparbank.GKBer;
         }
@@ -40,8 +38,10 @@ namespace Bank_WPF
 
         private void Button_Click_KundeBearbeiten(object sender, RoutedEventArgs e)
         {
+            Sparbank.Ber[List_Berater.SelectedIndex].Kunden[List_Kunden.SelectedIndex].KontoErstellen(1);
             Window Win_PKÜ = new Kontoübersicht(false, Sparbank.Ber[List_Berater.SelectedIndex].Kunden[List_Kunden.SelectedIndex]);
             Win_PKÜ.ShowDialog();
+
         }
 
         private void Button_Click_BeraterErstellen(object sender, RoutedEventArgs e)

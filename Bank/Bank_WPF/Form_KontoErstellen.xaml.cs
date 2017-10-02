@@ -36,12 +36,7 @@ namespace Bank_WPF
 
         private void Button_Click_KontoErstellen(object sender, RoutedEventArgs e)
         {
-            // Kontonummerzuweisung
-            kundenInstanz.KontoErstellen(1);
-        }
-
-        private void Button_Click_KontoNichtErstellen(object sender, RoutedEventArgs e)
-        {
+            kundenInstanz.KontoErstellen(Convert.ToInt32(txtb_Kontonummer.Text));
             this.Close();
         }
     }

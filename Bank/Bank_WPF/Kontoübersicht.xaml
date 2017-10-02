@@ -18,8 +18,8 @@
                                         <ColumnDefinition Width="100" />
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
-                                    <TextBlock Text="{Binding iban}" />
-                                    <TextBlock Text="{Binding kontostand}" Grid.Column="1"/>
+                                    <TextBlock Text="{Binding IBAN}" />
+                                    <TextBlock Text="{Binding Kontostand}" Grid.Column="1"/>
                                 </Grid>
                             </DataTemplate>
                         </ListBox.ItemTemplate>

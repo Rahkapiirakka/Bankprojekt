@@ -8,7 +8,7 @@
         Title="Benachrichtigungen" Height="260" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <TextBlock x:Name="txtbl_Benachrichtigung" Margin="20,20,20,80" TextWrapping="Wrap" Text=""/>
-        <Button x:Name="btn_OK" Content="OK" Margin="110,0,110,20" Height="30" VerticalAlignment="Bottom"/>
+        <Button x:Name="btn_OK" Content="OK" Margin="110,0,110,20" Height="30" VerticalAlignment="Bottom" Click="Button_Click_OK"/>
 
     </Grid>
 </Window>

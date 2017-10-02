@@ -77,11 +77,13 @@ namespace Bank_WPF
             {
                 Window Win_KontenErstellen = new Form_KontoErstellen(gkundenInstanz);
                 Win_KontenErstellen.ShowDialog();
+                List_Konten.Items.Refresh();
             }
             else
             {
                 Window Win_KontenErstellen = new Form_KontoErstellen(kundenInstanz);
                 Win_KontenErstellen.ShowDialog();
+                List_Konten.Items.Refresh();
             }
         }
 
@@ -91,11 +93,13 @@ namespace Bank_WPF
             {
                 Window Win_GeldEinzahlen = new Form_KontoBearbeiten(true, gkundenInstanz.Konten[List_Konten.SelectedIndex]);
                 Win_GeldEinzahlen.ShowDialog();
+                List_Konten.Items.Refresh();
             }
             else
             {
                 Window Win_GeldEinzahlen = new Form_KontoBearbeiten(true, kundenInstanz.Konten[List_Konten.SelectedIndex]);
                 Win_GeldEinzahlen.ShowDialog();
+                List_Konten.Items.Refresh();
             }
         }
 
@@ -105,11 +109,13 @@ namespace Bank_WPF
             {
                 Window Win_GeldAbheben = new Form_KontoBearbeiten(false, gkundenInstanz.Konten[List_Konten.SelectedIndex]);
                 Win_GeldAbheben.ShowDialog();
+                List_Konten.Items.Refresh();
             }
             else
             {
                 Window Win_GeldAbheben = new Form_KontoBearbeiten(false, kundenInstanz.Konten[List_Konten.SelectedIndex]);
                 Win_GeldAbheben.ShowDialog();
+                List_Konten.Items.Refresh();
             }
         }
 
@@ -117,6 +123,7 @@ namespace Bank_WPF
         {
             Window Win_KreditBeantragen = new Form_Kreditbeantragen(gberaterInstanz);
             Win_KreditBeantragen.ShowDialog();
+            List_Kredite.Items.Refresh();
         }
     }
 }

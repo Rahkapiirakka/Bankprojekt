@@ -34,5 +34,10 @@ namespace Bank_WPF
 
             txtbl_Benachrichtigung.Text = text;
         }
+
+        private void Button_Click_OK(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
