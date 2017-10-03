@@ -34,7 +34,6 @@ namespace Bank_Klassenbibliothek
         **  KONSTRUKTOR &FUNKTIONEN  **
         **                           **
         ******************************/
-        
         public Konto(int iban, double kontostand)
         {
             this.iban = iban;
