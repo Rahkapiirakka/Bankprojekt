@@ -35,9 +35,6 @@ namespace Bank_Klassenbibliothek
             set { kontostand = value; }
         }
 
-
-
-
         /******************************
         **                           **
         **  KONSTRUKTOR &FUNKTIONEN  **

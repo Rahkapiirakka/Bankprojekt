@@ -8,6 +8,11 @@ namespace Bank_Klassenbibliothek
 {
     public class Berater : Person
     {
+        /********************************
+	**                             **
+	**  VARIABLEN & EIGENSCHAFTEN  **
+	**                             **
+	********************************/
         private int beraterID;
 
         public int BeraterID
@@ -24,6 +29,11 @@ namespace Bank_Klassenbibliothek
             set { kunden = value; }
         }
 
+	/******************************
+	**                           **
+	**  KONSTRUKTOR &FUNKTIONEN  **
+	**                           **
+	******************************/
         public Berater(string name, string vorname) : base(name, vorname)
         {
             this.kunden = new List<Kunde>(); 
