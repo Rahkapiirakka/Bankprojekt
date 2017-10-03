@@ -8,13 +8,11 @@ namespace Bank_Klassenbibliothek
 {
     public class Konto
     {
-        /*********************************
-         **                             **
-         **  VARIABLEN & EIGENSCHAFTEN  **
-         **                             **
-         ********************************/
-
-        // Variable & Eigenschaften für die IBAN
+        /********************************
+        **                             **
+        **  VARIABLEN & EIGENSCHAFTEN  **
+        **                             **
+        ********************************/
         private int iban;
 
         public int IBAN
@@ -23,8 +21,6 @@ namespace Bank_Klassenbibliothek
             set { iban = value; }
         }
 
-
-        // Variable & Eigenschaften für den Kontostand
         private double kontostand;
 
         public double Kontostand
@@ -33,23 +29,16 @@ namespace Bank_Klassenbibliothek
             set { kontostand = value; }
         }
 
-
-
-
         /******************************
         **                           **
         **  KONSTRUKTOR &FUNKTIONEN  **
         **                           **
         ******************************/
-
-        // Konstruktor der Klasse
+        
         public Konto(int iban, double kontostand)
         {
             this.iban = iban;
             this.kontostand = kontostand;
         }
-
-        // Funktion
-
     }
 }
