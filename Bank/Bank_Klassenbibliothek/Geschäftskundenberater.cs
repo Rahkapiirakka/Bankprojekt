@@ -35,9 +35,9 @@ namespace Bank_Klassenbibliothek
             kre.Add(new Kredit(summe, zins, start, ende, knr));
         }
 
-        public void GKundeErstellen(string name, string vorname, int kundennummer)
+        public void GKundeErstellen(string name, string vorname, Boolean bonität)
         { 
-            GKunden.Add(new Geschäftskunde(name, vorname, kundennummer, true));
+            GKunden.Add(new Geschäftskunde(name, vorname, bonität));
         }
     }
 }

@@ -1,11 +1,12 @@
-﻿<Window x:Class="Bank_WPF.Berater_Kundenübersicht"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bank_WPF"
+        xmlns:Bank_Klassenbibliothek="clr-namespace:Bank_Klassenbibliothek;assembly=Bank_Klassenbibliothek" x:Class="Bank_WPF.Berater_Kundenübersicht"
         mc:Ignorable="d"
-        Title="Berater_Kunden_Auswahl" MinHeight="400" MinWidth="600">
+        Title="Kundenauswahl" MinHeight="400" MinWidth="600" Width="600">
     <Grid>
         <TabControl Margin="10,5,10,10">
             <TabItem x:Name="tab_Privatkunde" Header="Privatkunde">
@@ -30,20 +31,20 @@
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
-                    <ListBox x:Name="List_Kunden" Margin="0,30,10,50" Grid.Column="3" Grid.ColumnSpan="2">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Margin="0,2">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Margin="0,0,3,0" Text="{Binding Vorname}" />
-                                    <TextBlock Margin="0,0,3,0" Text="{Binding Name}" Grid.Column="1" />
-                                </Grid>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
+                    <DataGrid x:Name="List_Kunden" Grid.Column="3" IsReadOnly="True" HeadersVisibility="Column" Margin="0,30,10,50" AutoGenerateColumns="False" HorizontalContentAlignment="Stretch" GridLinesVisibility="None" SelectionMode="Single" SelectionChanged="Selection_Changed_Kunde">
+                        <DataGrid.Resources>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
+                            <Style TargetType="{x:Type DataGridCell}">
+                                <Setter Property="BorderThickness" Value="0" />
+                                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                            </Style>
+                        </DataGrid.Resources>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="40" Header="Nr" Binding="{Binding Kundennummer}" />
+                            <DataGridTextColumn Width="*" Header="Vorname" Binding="{Binding Vorname}" />
+                            <DataGridTextColumn Width="*" Header="Nachname" Binding="{Binding Name}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
                     <Button x:Name="btn_NeuerBerater" Content="Neuer Berater" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,10" Width="90" Height="30" VerticalAlignment="Bottom" Click="Button_Click_BeraterErstellen"/>
                     <Button x:Name="btn_NeuerKunde" Content="Neuer Kunde" Grid.Column="3" HorizontalAlignment="Left" Margin="0,0,0,10" Width="95" Height="30" VerticalAlignment="Bottom" Click="Button_Click_KundeErstellen"/>
                     <Button x:Name="btn_Kundebearbeiten" Content="Kunde bearbeiten" Grid.Column="3" Margin="110,0,0,10" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="110" Click="Button_Click_KundeBearbeiten"/>
@@ -59,21 +60,7 @@
                         <ColumnDefinition Width="5*"/>
                         <ColumnDefinition Width="137*"/>
                     </Grid.ColumnDefinitions>
-                    <ListBox x:Name="List_GBerater" Margin="0,30,10,50" Grid.Column="1">
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Margin="0,2">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Margin="0,0,3,0" Text="{Binding Vorname}" />
-                                    <TextBlock Margin="0,0,3,0" Text="{Binding Name}" Grid.Column="1"/>
-                                </Grid>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
-                    <ListBox x:Name="List_GKunden" Margin="0,30,10,50" Grid.Column="3" Grid.ColumnSpan="2">
+                    <ListBox x:Name="List_GBerater" Margin="0,30,10,50" Grid.Column="1" SelectionChanged="Selection_Changed_GBerater">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Grid Margin="0,2">
@@ -92,6 +79,21 @@
                     <Button x:Name="btn_GKundebearbeiten" Content="Kunde bearbeiten" Grid.Column="3" Margin="110,0,0,10" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="110" Click="Button_Click_GKundenBearbeiten"/>
                     <Label x:Name="lbl_GBeraterauswählen" Content="Geschäftskundenberater auswählen" Grid.Column="1" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="26" Width="200"/>
                     <Label x:Name="lbl_GKundeauswählen" Content="Geschäftskunde auswählen" Grid.Column="3" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="26" Width="172"/>
+                    <DataGrid x:Name="List_GKunden" Grid.Column="3" IsReadOnly="True" HeadersVisibility="Column" Margin="0,30,10,50" AutoGenerateColumns="False" HorizontalContentAlignment="Stretch" GridLinesVisibility="None" SelectionMode="Single" SelectionChanged="Selection_Changed_GKunde">
+                        <DataGrid.Resources>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
+                            <Style TargetType="{x:Type DataGridCell}">
+                                <Setter Property="BorderThickness" Value="0" />
+                                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                            </Style>
+                        </DataGrid.Resources>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="40" Header="Nr" Binding="{Binding Kundennummer}" />
+                            <DataGridTextColumn Width="*" Header="Vorname" Binding="{Binding Vorname}" />
+                            <DataGridTextColumn Width="*" Header="Nachname" Binding="{Binding Name}" />
+                            <DataGridCheckBoxColumn Width="*" Header="Bonität" Binding="{Binding Bonität}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </Grid>
             </TabItem>
         </TabControl>

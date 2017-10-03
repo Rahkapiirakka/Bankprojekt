@@ -8,6 +8,8 @@ namespace Bank_Klassenbibliothek
 {
     public class Kunde:Person
     {
+        public static int auto_kundennummer;
+
         private int kundennummer;
 
         public int Kundennummer
@@ -25,9 +27,9 @@ namespace Bank_Klassenbibliothek
             set { konten = value; }
         }
 
-        public Kunde(string name, string vorname, int kundennummer) :base(name, vorname)
+        public Kunde(string name, string vorname) :base(name, vorname)
         {
-            this.kundennummer = kundennummer;
+            this.kundennummer = System.Threading.Interlocked.Increment(ref auto_kundennummer);
             this.Konten = new List<Konto>();
         }
 

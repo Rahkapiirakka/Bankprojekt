@@ -32,16 +32,18 @@ namespace Bank_WPF
             }
             List_Berater.ItemsSource = Sparbank.Ber;
             List_GBerater.ItemsSource = Sparbank.GKBer;
+            btn_GKundebearbeiten.IsEnabled = false;
+            btn_Kundebearbeiten.IsEnabled = false;
+            btn_NeuerGKunde.IsEnabled = false;
+            btn_NeuerKunde.IsEnabled = false;
         }
 
         // Tab Privatkunde
 
         private void Button_Click_KundeBearbeiten(object sender, RoutedEventArgs e)
         {
-            Sparbank.Ber[List_Berater.SelectedIndex].Kunden[List_Kunden.SelectedIndex].KontoErstellen(1);
             Window Win_PKÜ = new Kontoübersicht(false, Sparbank.Ber[List_Berater.SelectedIndex].Kunden[List_Kunden.SelectedIndex]);
             Win_PKÜ.ShowDialog();
-
         }
 
         private void Button_Click_BeraterErstellen(object sender, RoutedEventArgs e)
@@ -62,6 +64,12 @@ namespace Bank_WPF
         {
             List_Kunden.ItemsSource = Sparbank.Ber[List_Berater.SelectedIndex].Kunden;
             List_Kunden.Items.Refresh();
+            btn_NeuerKunde.IsEnabled = true;
+        }
+
+        private void Selection_Changed_Kunde(object sender, SelectionChangedEventArgs e)
+        {
+            btn_Kundebearbeiten.IsEnabled = true;
         }
 
         // Tab Geschäftskunde
@@ -70,6 +78,7 @@ namespace Bank_WPF
         {
             Window Win_GKBeraterErstellen = new Form_BeraterErstellen(true, Sparbank);
             Win_GKBeraterErstellen.ShowDialog();
+            List_GBerater.Items.Refresh();
         }
 
         private void Button_Click_GKundenBearbeiten(object sender, RoutedEventArgs e)
@@ -82,6 +91,19 @@ namespace Bank_WPF
         {
             Window Win_GKundeErstellen = new Form_KundenErstellen(true, Sparbank.GKBer[List_GBerater.SelectedIndex]);
             Win_GKundeErstellen.ShowDialog();
+            List_GKunden.Items.Refresh();
+        }
+
+        private void Selection_Changed_GBerater(object sender, SelectionChangedEventArgs e)
+        {
+            List_GKunden.ItemsSource = Sparbank.GKBer[List_GBerater.SelectedIndex].GKunden;
+            List_GKunden.Items.Refresh();
+            btn_NeuerGKunde.IsEnabled = true;
+        }
+
+        private void Selection_Changed_GKunde(object sender, SelectionChangedEventArgs e)
+        {
+            btn_GKundebearbeiten.IsEnabled = true;
         }
     }
 }

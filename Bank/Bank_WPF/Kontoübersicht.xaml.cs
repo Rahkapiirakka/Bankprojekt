@@ -67,7 +67,7 @@ namespace Bank_WPF
             this.istGK = istGK;
             this.gkundenInstanz = gkundenInstanz;
             tab_Kredite.IsEnabled = true;
-            List_Konten.ItemsSource = kundenInstanz.Konten;
+            List_Konten.ItemsSource = gkundenInstanz.Konten;
             List_Kredite.ItemsSource = gberaterInstanz.Kre;
         }
 

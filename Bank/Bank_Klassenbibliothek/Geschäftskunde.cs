@@ -16,7 +16,7 @@ namespace Bank_Klassenbibliothek
             set { bonität = value; }
         }
 
-        public Geschäftskunde(string name, string vorname, int kundennummer, Boolean bonität) : base(name, vorname, kundennummer)
+        public Geschäftskunde(string name, string vorname, Boolean bonität) : base(name, vorname)
         {
             this.bonität = bonität;
         }
