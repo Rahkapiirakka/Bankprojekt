@@ -8,6 +8,11 @@ namespace Bank_Klassenbibliothek
 {
     public class Kredit
     {
+	/********************************
+	**                             **
+	**  VARIABLEN & EIGENSCHAFTEN  **
+	**                             **
+	********************************/
         private double summe;
 
         public double Summe
@@ -42,13 +47,17 @@ namespace Bank_Klassenbibliothek
 
         private int knr;
 
-	    public int Knr
-	    {
-		    get { return knr;}
-		    set { knr = value;}
-	    }
-
-
+	public int Knr
+	{
+	    get { return knr;}
+	    set { knr = value;}
+	}
+	    
+	/******************************
+	**                           **
+	**  KONSTRUKTOR &FUNKTIONEN  **
+	**                           **
+	******************************/
         public Kredit (double summe, double zins, DateTime start, DateTime ende, int knr)
         {
             this.summe = summe;
@@ -57,6 +66,5 @@ namespace Bank_Klassenbibliothek
             this.ende = ende;
             this.knr = knr;
         }
-
     }
 }
