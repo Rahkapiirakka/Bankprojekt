@@ -9,10 +9,10 @@ namespace Bank_Klassenbibliothek
     public class Geschäftskunde : Kunde
     {
     	/********************************
-		**                             **
-		**  VARIABLEN & EIGENSCHAFTEN  **
-		**                             **
-		********************************/
+	**                             **
+	**  VARIABLEN & EIGENSCHAFTEN  **
+	**                             **
+	********************************/
         private Boolean bonität;
 
         public Boolean Bonität
@@ -21,11 +21,11 @@ namespace Bank_Klassenbibliothek
             set { bonität = value; }
         }
 
-		/******************************
-		**                           **
-		**  KONSTRUKTOR &FUNKTIONEN  **
-		**                           **
-		******************************/
+	/******************************
+	**                           **
+	**  KONSTRUKTOR &FUNKTIONEN  **
+	**                           **
+	******************************/
         public Geschäftskunde(string name, string vorname, Boolean bonität) : base(name, vorname)
         {
             this.bonität = bonität;
