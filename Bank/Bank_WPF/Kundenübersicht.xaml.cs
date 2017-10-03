@@ -60,12 +60,15 @@ namespace Bank_WPF
             tab_Kredite.IsEnabled = false;
             btn_GeldAuszahlen.IsEnabled = false;
             btn_GeldEinzahlen.IsEnabled = false;
+            btn_KontoLöschen.IsEnabled = false;
             List_Konten.ItemsSource = kundenInstanz.Konten;
 
             chkb_Bonität.IsEnabled = false;
             lbl_Kundennummer.Content = lbl_Kundennummer.Content + kundenInstanz.Kundennummer.ToString();
             txtb_Vorname.Text = kundenInstanz.Vorname;
-            txtb_Nachname.Text = kundenInstanz.Name; 
+            txtb_Nachname.Text = kundenInstanz.Name;
+
+            btn_KreditLöschen.IsEnabled = false;
         }
 
         public Kundenübersicht(Boolean istGK, Geschäftskunde gkundenInstanz, Geschäftskundenberater gberaterInstanz)
@@ -77,6 +80,7 @@ namespace Bank_WPF
             tab_Kredite.IsEnabled = true;
             btn_GeldAuszahlen.IsEnabled = false;
             btn_GeldEinzahlen.IsEnabled = false;
+            btn_KontoLöschen.IsEnabled = false;
             List_Konten.ItemsSource = gkundenInstanz.Konten;
             List_Kredite.ItemsSource = gberaterInstanz.Kre.Where(item => item.Knr == gkundenInstanz.Kundennummer);
 
@@ -85,6 +89,8 @@ namespace Bank_WPF
             lbl_Kundennummer.Content = lbl_Kundennummer.Content + gkundenInstanz.Kundennummer.ToString();
             txtb_Vorname.Text = gkundenInstanz.Vorname;
             txtb_Nachname.Text = gkundenInstanz.Name;
+
+            btn_KreditLöschen.IsEnabled = false;
         }
 
         private void Button_Click_KontoErstellen(object sender, RoutedEventArgs e)
@@ -153,8 +159,19 @@ namespace Bank_WPF
 
         private void Selection_Changed_Konten(object sender, SelectionChangedEventArgs e)
         {
-            btn_GeldAuszahlen.IsEnabled = true;
-            btn_GeldEinzahlen.IsEnabled = true;
+            if (List_Konten.HasItems)
+            {
+                btn_GeldAuszahlen.IsEnabled = true;
+                btn_GeldEinzahlen.IsEnabled = true;
+                btn_KontoLöschen.IsEnabled = true;
+            }
+            else
+            {
+                btn_GeldAuszahlen.IsEnabled = false;
+                btn_GeldEinzahlen.IsEnabled = false;
+                btn_KontoLöschen.IsEnabled = false;
+            }
+            
         }
 
         private void Button_Click_KontoLöschen(object sender, RoutedEventArgs e)
@@ -202,6 +219,18 @@ namespace Bank_WPF
             {
                 Window Win_Benachrichtigung = new Benachrichtigungen("Fehlende Informationen", "Füllen Sie bitte alle Textfelder aus");
                 Win_Benachrichtigung.ShowDialog();
+            }
+        }
+
+        private void Selection_Changed_Kredite(object sender, SelectionChangedEventArgs e)
+        {
+            if (List_Kredite.HasItems)
+            {
+                btn_KreditLöschen.IsEnabled = true;
+            }
+            else
+            {
+                btn_KreditLöschen.IsEnabled = false;
             }
         }
     }
