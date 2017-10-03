@@ -27,12 +27,22 @@ namespace Bank_WPF
             set { text = value; }
         }
 
-        public Benachrichtigungen(string text)
+        private string titel;
+
+        public string Titel
+        {
+            get { return titel; }
+            set { titel = value; }
+        }
+
+        public Benachrichtigungen(string titel, string text)
         {
             InitializeComponent();
             this.text = text;
+            this.titel = titel;
 
             txtbl_Benachrichtigung.Text = text;
+            Win_Benachrichtigungen.Title = titel;        
         }
 
         private void Button_Click_OK(object sender, RoutedEventArgs e)

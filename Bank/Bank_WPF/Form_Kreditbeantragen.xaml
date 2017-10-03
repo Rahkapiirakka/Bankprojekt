@@ -1,16 +1,16 @@
-﻿<Window x:Class="Bank_WPF.Form_Kreditbeantragen"
+﻿<Window x:Name="Win_KreditBeantragen" x:Class="Bank_WPF.Form_Kreditbeantragen"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bank_WPF"
         mc:Ignorable="d"
-        Title="Form_Kreditbeantragen" Height="260" Width="328" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+        Title="Kredit beantragen" Height="260" Width="328" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <DatePicker x:Name="dp_StartDatum" HorizontalAlignment="Left" Margin="20,132,0,0" VerticalAlignment="Top"/>
         <DatePicker x:Name="dp_EndDatum" HorizontalAlignment="Left" Margin="170,132,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtb_Summe" Height="23" Margin="20,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="280"/>
-        <TextBox x:Name="txtb_Zins" Height="23" Margin="20,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="280"/>
+        <TextBox x:Name="txtb_Summe" Height="23" PreviewTextInput="NumericTextBoxInput" Margin="20,32,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="280"/>
+        <TextBox x:Name="txtb_Zins" Height="23" PreviewTextInput="NumericTextBoxInput" Margin="20,82,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" HorizontalAlignment="Left" Width="280"/>
         <Label x:Name="lbl_Summe" Content="Summe" HorizontalAlignment="Left" Margin="16,10,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_Zins" Content="Zinssatz" HorizontalAlignment="Left" Margin="16,60,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lbl_StartDatum" Content="Start" HorizontalAlignment="Left" Margin="16,110,0,0" VerticalAlignment="Top"/>

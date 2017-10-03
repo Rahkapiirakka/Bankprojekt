@@ -62,15 +62,23 @@ namespace Bank_WPF
 
         private void Button_Clicked_KundeErstellen(object sender, RoutedEventArgs e)
         {
-            if (istGK == true)
+            if (!String.IsNullOrWhiteSpace(txtb_KundeNachname.Text) && !String.IsNullOrWhiteSpace(txtb_KundeVorname.Text))
             {
-                this.gberaterInstanz.GKundeErstellen(txtb_KundeNachname.Text, txtb_KundeVorname.Text, Chkb_Bonität.IsChecked.Value);
-                this.Close();
+                if (istGK == true)
+                {
+                    this.gberaterInstanz.GKundeErstellen(txtb_KundeNachname.Text, txtb_KundeVorname.Text, Chkb_Bonität.IsChecked.Value);
+                    this.Close();
+                }
+                else
+                {
+                    this.beraterInstanz.KundeErstellen(txtb_KundeNachname.Text, txtb_KundeVorname.Text);
+                    this.Close();
+                }
             }
             else
             {
-                this.beraterInstanz.KundeErstellen(txtb_KundeNachname.Text, txtb_KundeVorname.Text);
-                this.Close();
+                Window Win_Benachrichtigung = new Benachrichtigungen("Fehlende Informationen", "Füllen Sie bitte alle Textfelder aus");
+                Win_Benachrichtigung.ShowDialog();
             }
         }
     }

@@ -20,5 +20,12 @@ namespace Bank_Klassenbibliothek
         {
             this.bonität = bonität;
         }
+
+        public void KundeÄndern(string name, string vorname, Boolean bonität)
+        {
+            this.Name = name;
+            this.Vorname = vorname;
+            this.Bonität = bonität;
+        }
     }
 }

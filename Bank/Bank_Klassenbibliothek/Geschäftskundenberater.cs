@@ -35,9 +35,19 @@ namespace Bank_Klassenbibliothek
             kre.Add(new Kredit(summe, zins, start, ende, knr));
         }
 
+        public void KreditLöschen(int position)
+        {
+            kre.RemoveAt(position);
+        }
+
         public void GKundeErstellen(string name, string vorname, Boolean bonität)
         { 
             GKunden.Add(new Geschäftskunde(name, vorname, bonität));
+        }
+
+        public void GKundeLöschen(int Position)
+        {
+            gKunden.RemoveAt(Position);
         }
     }
 }

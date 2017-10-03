@@ -36,14 +36,17 @@ namespace Bank_WPF
             btn_Kundebearbeiten.IsEnabled = false;
             btn_NeuerGKunde.IsEnabled = false;
             btn_NeuerKunde.IsEnabled = false;
+            btn_KundeLöschen.IsEnabled = false;
+            btn_GKundeLöschen.IsEnabled = false;
         }
 
         // Tab Privatkunde
 
         private void Button_Click_KundeBearbeiten(object sender, RoutedEventArgs e)
         {
-            Window Win_PKÜ = new Kontoübersicht(false, Sparbank.Ber[List_Berater.SelectedIndex].Kunden[List_Kunden.SelectedIndex]);
+            Window Win_PKÜ = new Kundenübersicht(false, Sparbank.Ber[List_Berater.SelectedIndex].Kunden[List_Kunden.SelectedIndex]);
             Win_PKÜ.ShowDialog();
+            List_Kunden.Items.Refresh();
         }
 
         private void Button_Click_BeraterErstellen(object sender, RoutedEventArgs e)
@@ -62,15 +65,32 @@ namespace Bank_WPF
 
         private void Selection_Changed_Berater(object sender, SelectionChangedEventArgs e)
         {
-            List_Kunden.ItemsSource = Sparbank.Ber[List_Berater.SelectedIndex].Kunden;
-            List_Kunden.Items.Refresh();
-            btn_NeuerKunde.IsEnabled = true;
+                List_Kunden.ItemsSource = Sparbank.Ber[List_Berater.SelectedIndex].Kunden;
+                List_Kunden.Items.Refresh();
+                btn_NeuerKunde.IsEnabled = true;
         }
 
         private void Selection_Changed_Kunde(object sender, SelectionChangedEventArgs e)
         {
-            btn_Kundebearbeiten.IsEnabled = true;
+            if (List_Kunden.HasItems)
+            {
+                btn_Kundebearbeiten.IsEnabled = true;
+                btn_KundeLöschen.IsEnabled = true;
+            }
+            else
+            {
+                btn_Kundebearbeiten.IsEnabled = false;
+                btn_KundeLöschen.IsEnabled = false;
+            }
         }
+
+        private void Button_Click_KundeLöschen(object sender, RoutedEventArgs e)
+        {
+            Window Win_KundeLöschen = new Form_Löschen(List_Kunden.SelectedIndex, "Kunde", Sparbank.Ber[List_Berater.SelectedIndex]);
+            Win_KundeLöschen.ShowDialog();
+            List_Kunden.Items.Refresh();
+        }
+
 
         // Tab Geschäftskunde
 
@@ -83,8 +103,9 @@ namespace Bank_WPF
 
         private void Button_Click_GKundenBearbeiten(object sender, RoutedEventArgs e)
         {
-            Window Win_GKÜ = new Kontoübersicht(true, Sparbank.GKBer[List_GBerater.SelectedIndex].GKunden[List_GKunden.SelectedIndex], Sparbank.GKBer[List_GBerater.SelectedIndex]);
+            Window Win_GKÜ = new Kundenübersicht(true, Sparbank.GKBer[List_GBerater.SelectedIndex].GKunden[List_GKunden.SelectedIndex], Sparbank.GKBer[List_GBerater.SelectedIndex]);
             Win_GKÜ.ShowDialog();
+            List_GKunden.Items.Refresh();
         }
 
         private void Button_Click_GKundenErstellen(object sender, RoutedEventArgs e)
@@ -96,14 +117,30 @@ namespace Bank_WPF
 
         private void Selection_Changed_GBerater(object sender, SelectionChangedEventArgs e)
         {
-            List_GKunden.ItemsSource = Sparbank.GKBer[List_GBerater.SelectedIndex].GKunden;
-            List_GKunden.Items.Refresh();
-            btn_NeuerGKunde.IsEnabled = true;
+                List_GKunden.ItemsSource = Sparbank.GKBer[List_GBerater.SelectedIndex].GKunden;
+                List_GKunden.Items.Refresh();
+                btn_NeuerGKunde.IsEnabled = true;
         }
 
         private void Selection_Changed_GKunde(object sender, SelectionChangedEventArgs e)
         {
-            btn_GKundebearbeiten.IsEnabled = true;
+            if (List_GKunden.HasItems)
+            {
+                btn_GKundebearbeiten.IsEnabled = true;
+                btn_GKundeLöschen.IsEnabled = true;
+            }
+            else
+            {
+                btn_GKundebearbeiten.IsEnabled = false;
+                btn_GKundeLöschen.IsEnabled = false;
+            }
         }
-    }
+
+        private void Button_Click_GKundeLöschen(object sender, RoutedEventArgs e)
+        {
+            Window Win_GKundeLöschen = new Form_Löschen(List_GKunden.SelectedIndex, "GKunde", Sparbank.GKBer[List_GBerater.SelectedIndex]);
+            Win_GKundeLöschen.ShowDialog();
+            List_GKunden.Items.Refresh();
+        }
+    }  
 }

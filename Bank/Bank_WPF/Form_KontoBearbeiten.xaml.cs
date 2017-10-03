@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Bank_Klassenbibliothek;
+using System.Text.RegularExpressions;
 
 namespace Bank_WPF
 {
@@ -45,36 +46,70 @@ namespace Bank_WPF
             if (einzahlen == true)
             {
                 lbl_BetragÄndern.Content = "Betrag einzahlen";
-                lbl_VerfügbaresGuthZahl.Content = kontoInstanz.Kontostand;
+                lbl_VerfügbaresGuthZahl.Content = kontoInstanz.Kontostand.ToString("F") + "€";
                 btn_Bearbeiten.Content = "Einzahlen";
-
+                Win_KontoBearbeiten.Title = "Geld einzahlen";
             }
             else
             {
                 lbl_BetragÄndern.Content = "Gewünschter Betrag";
-                lbl_VerfügbaresGuthZahl.Content = kontoInstanz.Kontostand;
+                lbl_VerfügbaresGuthZahl.Content = kontoInstanz.Kontostand.ToString("F") + "€";
                 btn_Bearbeiten.Content = "Auszahlen";
+                Win_KontoBearbeiten.Title = "Geld auszahlen";
             }
         }
 
-        private void Button_Click_BetragÄndern(object sender, RoutedEventArgs e)
+        void NumericTextBoxInput(object sender, TextCompositionEventArgs e)
         {
-            if (einzahlen == true)
+            var regex = new Regex(@"^[0-9]*(?:\,[0-9]*)?$");
+            if (regex.IsMatch(e.Text) && !(e.Text == "," && ((TextBox)sender).Text.Contains(e.Text)))
             {
-                kontoInstanz.Kontostand = kontoInstanz.Kontostand + Convert.ToDouble(txtb_BetragÄndern.Text);
+                e.Handled = false;
             }
             else
             {
-                if (Convert.ToDouble(txtb_BetragÄndern.Text) > kontoInstanz.Kontostand)
+                e.Handled = true;
+            }
+        }
+
+
+        private void Button_Click_BetragÄndern(object sender, RoutedEventArgs e)
+        {
+            if (!String.IsNullOrWhiteSpace(txtb_BetragÄndern.Text))
+            {
+                if (einzahlen == true)
                 {
-                    Window Win_Benachrichtigung = new Benachrichtigungen("Der gewünschte Betrag übersteigt den verfügbaren Betrag auf dem Konto.");
-                    Win_Benachrichtigung.ShowDialog();
+                    if ((kontoInstanz.Kontostand + Math.Round(Convert.ToDouble(txtb_BetragÄndern.Text), 2)) < 1000000)
+                    {
+                        kontoInstanz.GeldEinzahlen(Math.Round(Convert.ToDouble(txtb_BetragÄndern.Text), 2));
+                        this.Close();
+                    }
+                    else
+                    {
+                        Window Win_Benachrichtigung = new Benachrichtigungen("Kontolimit erreicht", "Der einzuzahlende Betrag übersteigt mit dem verfügbaren Guthaben das Kontolimit.");
+                        Win_Benachrichtigung.ShowDialog();
+                    }
                 }
                 else
                 {
-                    kontoInstanz.Kontostand = kontoInstanz.Kontostand - Convert.ToDouble(txtb_BetragÄndern.Text);
+                    if (Math.Round(Convert.ToDouble(txtb_BetragÄndern.Text), 2) > kontoInstanz.Kontostand)
+                    {
+                        Window Win_Benachrichtigung = new Benachrichtigungen("Konto nicht gedeckt", "Der gewünschte Betrag übersteigt den verfügbaren Betrag auf dem Konto.");
+                        Win_Benachrichtigung.ShowDialog();
+                    }
+                    else
+                    {
+                        kontoInstanz.GeldAuszahlen(Math.Round(Convert.ToDouble(txtb_BetragÄndern.Text), 2));
+                        this.Close();
+                    }
                 }
             }
+            else
+            {
+                Window Win_Benachrichtigung = new Benachrichtigungen("Fehlende Informationen", "Füllen Sie bitte alle Textfelder aus");
+                Win_Benachrichtigung.ShowDialog();
+            }
         }
-    }
+
+    }   
 }

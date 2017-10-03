@@ -4,18 +4,18 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bank_WPF"
-        xmlns:Bank_Klassenbibliothek="clr-namespace:Bank_Klassenbibliothek;assembly=Bank_Klassenbibliothek" x:Class="Bank_WPF.Berater_Kundenübersicht"
+        xmlns:Bank_Klassenbibliothek="clr-namespace:Bank_Klassenbibliothek;assembly=Bank_Klassenbibliothek" x:Name="Win_Kundenübersicht" x:Class="Bank_WPF.Berater_Kundenübersicht"
         mc:Ignorable="d"
-        Title="Kundenauswahl" MinHeight="400" MinWidth="600" Width="600">
+        Title="Kundenauswahl" MinHeight="400" MinWidth="600" Width="600" WindowStartupLocation="CenterOwner">
     <Grid>
         <TabControl Margin="10,5,10,10">
             <TabItem x:Name="tab_Privatkunde" Header="Privatkunde">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="137*"/>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="137*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="203*"/>
+                        <ColumnDefinition Width="11*"/>
+                        <ColumnDefinition Width="342*"/>
                     </Grid.ColumnDefinitions>
                     <ListBox x:Name="List_Berater" Margin="0,30,10,50" Grid.Column="1" SelectionChanged="Selection_Changed_Berater">
                         <ListBox.ItemTemplate>
@@ -47,18 +47,19 @@
                     </DataGrid>
                     <Button x:Name="btn_NeuerBerater" Content="Neuer Berater" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,10" Width="90" Height="30" VerticalAlignment="Bottom" Click="Button_Click_BeraterErstellen"/>
                     <Button x:Name="btn_NeuerKunde" Content="Neuer Kunde" Grid.Column="3" HorizontalAlignment="Left" Margin="0,0,0,10" Width="95" Height="30" VerticalAlignment="Bottom" Click="Button_Click_KundeErstellen"/>
-                    <Button x:Name="btn_Kundebearbeiten" Content="Kunde bearbeiten" Grid.Column="3" Margin="110,0,0,10" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="110" Click="Button_Click_KundeBearbeiten"/>
+                    <Button x:Name="btn_Kundebearbeiten" Content="Kunde bearbeiten" Grid.Column="3" Margin="215,0,0,10" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="110" Click="Button_Click_KundeBearbeiten"/>
+                    <Button x:Name="btn_KundeLöschen" Content="Kunde löschen" Grid.Column="3" Margin="105,0,0,10" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100" Click="Button_Click_KundeLöschen"/>
                     <Label x:Name="lbl_Beraterauswählen" Content="Berater auswählen" Grid.Column="1" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="26" Width="107"/>
-                    <Label x:Name="lbl_Kundeauswählen" Content="Kunde auswählen" Grid.Column="3" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="26" Width="102" Grid.ColumnSpan="2"/>
+                    <Label x:Name="lbl_Kundeauswählen" Content="Kunde auswählen" Grid.Column="3" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="26" Width="102"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tab_Geschäftskunde" Header="Geschäftskunde">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="137*"/>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="137*"/>
+                        <ColumnDefinition Width="10*"/>
+                        <ColumnDefinition Width="203*"/>
+                        <ColumnDefinition Width="11*"/>
+                        <ColumnDefinition Width="342*"/>
                     </Grid.ColumnDefinitions>
                     <ListBox x:Name="List_GBerater" Margin="0,30,10,50" Grid.Column="1" SelectionChanged="Selection_Changed_GBerater">
                         <ListBox.ItemTemplate>
@@ -76,7 +77,8 @@
                     </ListBox>
                     <Button x:Name="btn_NeuerGBerater" Content="Neuer Berater" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,10" Width="90" Height="30" VerticalAlignment="Bottom" Click="Button_Click_GKBeraterErstellen"/>
                     <Button x:Name="btn_NeuerGKunde" Content="Neuer Kunde" Grid.Column="3" HorizontalAlignment="Left" Margin="0,0,0,10" Width="95" Height="30" VerticalAlignment="Bottom" Click="Button_Click_GKundenErstellen"/>
-                    <Button x:Name="btn_GKundebearbeiten" Content="Kunde bearbeiten" Grid.Column="3" Margin="110,0,0,10" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="110" Click="Button_Click_GKundenBearbeiten"/>
+                    <Button x:Name="btn_GKundeLöschen" Content="Kunde löschen" Grid.Column="3" HorizontalAlignment="Left" Margin="105,0,0,10" Width="100" Height="30" VerticalAlignment="Bottom" Click="Button_Click_GKundeLöschen"/>
+                    <Button x:Name="btn_GKundebearbeiten" Content="Kunde bearbeiten" Grid.Column="3" Margin="215,0,0,10" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="110" Click="Button_Click_GKundenBearbeiten"/>
                     <Label x:Name="lbl_GBeraterauswählen" Content="Geschäftskundenberater auswählen" Grid.Column="1" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="26" Width="200"/>
                     <Label x:Name="lbl_GKundeauswählen" Content="Geschäftskunde auswählen" Grid.Column="3" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="26" Width="172"/>
                     <DataGrid x:Name="List_GKunden" Grid.Column="3" IsReadOnly="True" HeadersVisibility="Column" Margin="0,30,10,50" AutoGenerateColumns="False" HorizontalContentAlignment="Stretch" GridLinesVisibility="None" SelectionMode="Single" SelectionChanged="Selection_Changed_GKunde">

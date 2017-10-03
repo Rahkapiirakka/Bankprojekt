@@ -74,6 +74,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Form_Löschen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Form_Kreditbeantragen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -82,7 +86,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Kontoübersicht.xaml">
+    <Page Include="Kundenübersicht.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -105,14 +109,17 @@
     <Compile Include="Form_KontoErstellen.xaml.cs">
       <DependentUpon>Form_KontoErstellen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Form_Löschen.xaml.cs">
+      <DependentUpon>Form_Löschen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Form_Kreditbeantragen.xaml.cs">
       <DependentUpon>Form_Kreditbeantragen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Form_KundenErstellen.xaml.cs">
       <DependentUpon>Form_KundenErstellen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Kontoübersicht.xaml.cs">
-      <DependentUpon>Kontoübersicht.xaml</DependentUpon>
+    <Compile Include="Kundenübersicht.xaml.cs">
+      <DependentUpon>Kundenübersicht.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -46,16 +46,24 @@ namespace Bank_WPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (istGKB == true)
+            if (!String.IsNullOrWhiteSpace(txtb_Nachname.Text) && !String.IsNullOrWhiteSpace(txtb_Vorname.Text))
             {
-                
-                bankInstanz.GKBeraterErstellen(txtb_Nachname.Text, txtb_Vorname.Text);
-                this.Close();
+                if (istGKB == true)
+                {
+
+                    bankInstanz.GKBeraterErstellen(txtb_Nachname.Text, txtb_Vorname.Text);
+                    this.Close();
+                }
+                else
+                {
+                    bankInstanz.BeraterErstellen(txtb_Nachname.Text, txtb_Vorname.Text);
+                    this.Close();
+                }
             }
             else
             {
-                bankInstanz.BeraterErstellen(txtb_Nachname.Text, txtb_Vorname.Text);
-                this.Close();
+                Window Win_Benachrichtigung = new Benachrichtigungen("Fehlende Informationen", "Füllen Sie bitte alle Textfelder aus");
+                Win_Benachrichtigung.ShowDialog();
             }
         }
     }

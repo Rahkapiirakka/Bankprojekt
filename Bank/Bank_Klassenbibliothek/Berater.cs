@@ -33,5 +33,10 @@ namespace Bank_Klassenbibliothek
         {
             Kunden.Add(new Kunde(name, vorname));
         }
+
+        public void KundeLöschen(int Position)
+        {
+            Kunden.RemoveAt(Position);
+        }
     }
 }

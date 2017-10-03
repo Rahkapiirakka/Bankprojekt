@@ -14,6 +14,8 @@ namespace Bank_Klassenbibliothek
          **                             **
          ********************************/
 
+        private static int auto_iban;
+
         // Variable & Eigenschaften für die IBAN
         private int iban;
 
@@ -23,7 +25,7 @@ namespace Bank_Klassenbibliothek
             set { iban = value; }
         }
 
-
+        
         // Variable & Eigenschaften für den Kontostand
         private double kontostand;
 
@@ -43,13 +45,22 @@ namespace Bank_Klassenbibliothek
         ******************************/
 
         // Konstruktor der Klasse
-        public Konto(int iban, double kontostand)
+        public Konto(double kontostand)
         {
-            this.iban = iban;
+            this.iban = System.Threading.Interlocked.Increment(ref auto_iban);
             this.kontostand = kontostand;
         }
 
         // Funktion
 
+        public void GeldEinzahlen(double Betrag)
+        {
+            kontostand = kontostand + Betrag;
+        }
+
+        public void GeldAuszahlen(double Betrag)
+        {
+            kontostand = kontostand - Betrag;
+        }
     }
 }

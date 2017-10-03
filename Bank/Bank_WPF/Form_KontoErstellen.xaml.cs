@@ -36,7 +36,12 @@ namespace Bank_WPF
 
         private void Button_Click_KontoErstellen(object sender, RoutedEventArgs e)
         {
-            kundenInstanz.KontoErstellen(Convert.ToInt32(txtb_Kontonummer.Text));
+            kundenInstanz.KontoErstellen();
+            this.Close();
+        }
+
+        private void Button_Click_KontoNichtErstellen(object sender, RoutedEventArgs e)
+        {
             this.Close();
         }
     }

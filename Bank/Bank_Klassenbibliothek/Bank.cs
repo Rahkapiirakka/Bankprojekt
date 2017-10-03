@@ -39,6 +39,16 @@ namespace Bank_Klassenbibliothek
         {
             gkBer.Add(new Geschäftskundenberater(name, vorname));
         }
+
+        public void BeraterLöschen(int position)
+        {
+            ber.RemoveAt(position);
+        }
+
+        public void GBeraterLöschen(int position)
+        {
+            GKBer.RemoveAt(position);
+        }
     }
 
 }
