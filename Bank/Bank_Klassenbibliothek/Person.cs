@@ -8,6 +8,11 @@ namespace Bank_Klassenbibliothek
 {
     public abstract class Person
     {
+        /********************************
+        **                             **
+        **  VARIABLEN & EIGENSCHAFTEN  **
+        **                             **
+        ********************************/
         private String name;
 
         public String Name
@@ -24,15 +29,15 @@ namespace Bank_Klassenbibliothek
             set { vorname = value; }
         }
 
+        /******************************
+        **                           **
+        **  KONSTRUKTOR &FUNKTIONEN  **
+        **                           **
+        ******************************/
         public Person(string name, string vorname)
         {
             this.name = name;
             this.vorname = vorname;
         }
-
     }
-
-
-
-
 }
