@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace Bank_Klassenbibliothek
 {
-    public class Geschäftskundenberater: Berater
+    public class Geschäftskundenberater : Berater
     {
+        /********************************
+        **                             **
+        **  VARIABLEN & EIGENSCHAFTEN  **
+        **                             **
+        ********************************/
         private List<Kredit> kre;
 
         public List<Kredit> Kre
@@ -24,6 +29,11 @@ namespace Bank_Klassenbibliothek
             set { gKunden = value; }
         }
 
+        /******************************
+        **                           **
+        **  KONSTRUKTOR &FUNKTIONEN  **
+        **                           **
+        ******************************/
         public Geschäftskundenberater(string name, string vorname) : base(name, vorname)
         {
             this.kre = new List<Kredit>();
