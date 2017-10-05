@@ -61,14 +61,14 @@ namespace Bank_WPF
 
         private void Button_Click_BeraterErstellen(object sender, RoutedEventArgs e)
         {
-            Window Win_KBeraterErstellen = new Form_BeraterErstellen(false, Sparbank);
+            Window Win_KBeraterErstellen = new Berater_Erstellen(false, Sparbank);
             Win_KBeraterErstellen.ShowDialog();
             List_Berater.Items.Refresh();
         }
 
         private void Button_Click_KundeErstellen(object sender, RoutedEventArgs e)
         {
-            Window Win_KundeErstellen = new Form_KundenErstellen(false, Sparbank.Ber[List_Berater.SelectedIndex]);
+            Window Win_KundeErstellen = new Kunden_Erstellen(false, Sparbank.Ber[List_Berater.SelectedIndex]);
             Win_KundeErstellen.ShowDialog();
             List_Kunden.Items.Refresh();
         }
@@ -96,7 +96,7 @@ namespace Bank_WPF
 
         private void Button_Click_KundeLöschen(object sender, RoutedEventArgs e)
         {
-            Window Win_KundeLöschen = new Form_Löschen(List_Kunden.SelectedIndex, "Kunde", Sparbank.Ber[List_Berater.SelectedIndex]);
+            Window Win_KundeLöschen = new Löschen(List_Kunden.SelectedIndex, "Kunde", Sparbank.Ber[List_Berater.SelectedIndex]);
             Win_KundeLöschen.ShowDialog();
             List_Kunden.Items.Refresh();
         }
@@ -108,7 +108,7 @@ namespace Bank_WPF
 
         private void Button_Click_GKBeraterErstellen(object sender, RoutedEventArgs e)
         {
-            Window Win_GKBeraterErstellen = new Form_BeraterErstellen(true, Sparbank);
+            Window Win_GKBeraterErstellen = new Berater_Erstellen(true, Sparbank);
             Win_GKBeraterErstellen.ShowDialog();
             List_GBerater.Items.Refresh();
         }
@@ -122,7 +122,7 @@ namespace Bank_WPF
 
         private void Button_Click_GKundenErstellen(object sender, RoutedEventArgs e)
         {
-            Window Win_GKundeErstellen = new Form_KundenErstellen(true, Sparbank.GKBer[List_GBerater.SelectedIndex]);
+            Window Win_GKundeErstellen = new Kunden_Erstellen(true, Sparbank.GKBer[List_GBerater.SelectedIndex]);
             Win_GKundeErstellen.ShowDialog();
             List_GKunden.Items.Refresh();
         }
@@ -150,7 +150,7 @@ namespace Bank_WPF
 
         private void Button_Click_GKundeLöschen(object sender, RoutedEventArgs e)
         {
-            Window Win_GKundeLöschen = new Form_Löschen(List_GKunden.SelectedIndex, "GKunde", Sparbank.GKBer[List_GBerater.SelectedIndex]);
+            Window Win_GKundeLöschen = new Löschen(List_GKunden.SelectedIndex, "GKunde", Sparbank.GKBer[List_GBerater.SelectedIndex]);
             Win_GKundeLöschen.ShowDialog();
             List_GKunden.Items.Refresh();
         }

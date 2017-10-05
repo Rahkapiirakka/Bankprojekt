@@ -16,9 +16,9 @@ using Bank_Klassenbibliothek;
 namespace Bank_WPF
 {
     /// <summary>
-    /// Interaktionslogik für Form_Löschen.xaml
+    /// Interaktionslogik für Löschen.xaml
     /// </summary>
-    public partial class Form_Löschen : Window
+    public partial class Löschen : Window
     {
 
         #region Variablen 
@@ -75,7 +75,7 @@ namespace Bank_WPF
 
         #region Konstrukoren
 
-        public Form_Löschen(int position, string typ, Berater beraterInstanz)
+        public Löschen(int position, string typ, Berater beraterInstanz)
         {
             InitializeComponent();
             this.position = position;
@@ -85,7 +85,7 @@ namespace Bank_WPF
             lbl_KontoerstellenFrage.Content = "Wollen Sie den Kunden löschen?"; 
         }
 
-        public Form_Löschen(int position, string typ, Geschäftskundenberater gberaterInstanz)
+        public Löschen(int position, string typ, Geschäftskundenberater gberaterInstanz)
         {
             InitializeComponent();
             this.position = position;
@@ -106,7 +106,7 @@ namespace Bank_WPF
 
         }
 
-        public Form_Löschen(int position, string typ, Geschäftskunde gkundenInstanz)
+        public Löschen(int position, string typ, Geschäftskunde gkundenInstanz)
         {
             InitializeComponent();
             this.position = position;
@@ -116,7 +116,7 @@ namespace Bank_WPF
             lbl_KontoerstellenFrage.Content = "Wollen Sie das Konto löschen?";
         }
 
-        public Form_Löschen(int position, string typ, Kunde kundenInstanz)
+        public Löschen(int position, string typ, Kunde kundenInstanz)
         {
             InitializeComponent();
             this.position = position;
@@ -129,7 +129,7 @@ namespace Bank_WPF
         #endregion
 
         #region Methoden
-        // Methoden für Form_Löschen
+        // Methoden für Löschen
 
         private void Button_Click_NichtLöschen(object sender, RoutedEventArgs e)
         {

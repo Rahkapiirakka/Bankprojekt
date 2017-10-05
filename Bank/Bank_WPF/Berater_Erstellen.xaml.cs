@@ -16,9 +16,9 @@ using Bank_Klassenbibliothek;
 namespace Bank_WPF
 {
     /// <summary>
-    /// Interaktionslogik für Form_BeraterErstellen.xaml
+    /// Interaktionslogik für Berater_Erstellen.xaml
     /// </summary>
-    public partial class Form_BeraterErstellen : Window
+    public partial class Berater_Erstellen : Window
     {
         #region Variablen
 
@@ -42,7 +42,7 @@ namespace Bank_WPF
 
         #region Konstruktoren
 
-        public Form_BeraterErstellen(Boolean istGKB, Bank bankInstanz)
+        public Berater_Erstellen(Boolean istGKB, Bank bankInstanz)
         {
             this.bankInstanz = bankInstanz;
             this.istGKB = istGKB;

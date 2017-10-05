@@ -17,9 +17,9 @@ using System.Text.RegularExpressions;
 namespace Bank_WPF
 {
     /// <summary>
-    /// Interaktionslogik für Form_KontoBearbeiten.xaml
+    /// Interaktionslogik für Konto_Bearbeiten.xaml
     /// </summary>
-    public partial class Form_KontoBearbeiten : Window
+    public partial class Konto_Bearbeiten : Window
     {
         #region Variablen
 
@@ -43,7 +43,7 @@ namespace Bank_WPF
 
         #region Konstruktoren
 
-        public Form_KontoBearbeiten(Boolean einzahlen, Konto kontoInstanz)
+        public Konto_Bearbeiten(Boolean einzahlen, Konto kontoInstanz)
         {
             InitializeComponent();
             this.einzahlen = einzahlen;

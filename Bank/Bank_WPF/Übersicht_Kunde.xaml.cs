@@ -108,13 +108,13 @@ namespace Bank_WPF
         {
             if (istGK == true)
             {
-                Window Win_KontenErstellen = new Form_KontoErstellen(gkundenInstanz);
+                Window Win_KontenErstellen = new Konto_Erstellen(gkundenInstanz);
                 Win_KontenErstellen.ShowDialog();
                 List_Konten.Items.Refresh();
             }
             else
             {
-                Window Win_KontenErstellen = new Form_KontoErstellen(kundenInstanz);
+                Window Win_KontenErstellen = new Konto_Erstellen(kundenInstanz);
                 Win_KontenErstellen.ShowDialog();
                 List_Konten.Items.Refresh();
             }
@@ -124,13 +124,13 @@ namespace Bank_WPF
         {
             if (istGK == true)
             {
-                Window Win_GeldEinzahlen = new Form_KontoBearbeiten(true, gkundenInstanz.Konten[List_Konten.SelectedIndex]);
+                Window Win_GeldEinzahlen = new Konto_Bearbeiten(true, gkundenInstanz.Konten[List_Konten.SelectedIndex]);
                 Win_GeldEinzahlen.ShowDialog();
                 List_Konten.Items.Refresh();
             }
             else
             {
-                Window Win_GeldEinzahlen = new Form_KontoBearbeiten(true, kundenInstanz.Konten[List_Konten.SelectedIndex]);
+                Window Win_GeldEinzahlen = new Konto_Bearbeiten(true, kundenInstanz.Konten[List_Konten.SelectedIndex]);
                 Win_GeldEinzahlen.ShowDialog();
                 List_Konten.Items.Refresh();
             }
@@ -140,13 +140,13 @@ namespace Bank_WPF
         {
             if (istGK == true)
             {
-                Window Win_GeldAbheben = new Form_KontoBearbeiten(false, gkundenInstanz.Konten[List_Konten.SelectedIndex]);
+                Window Win_GeldAbheben = new Konto_Bearbeiten(false, gkundenInstanz.Konten[List_Konten.SelectedIndex]);
                 Win_GeldAbheben.ShowDialog();
                 List_Konten.Items.Refresh();
             }
             else
             {
-                Window Win_GeldAbheben = new Form_KontoBearbeiten(false, kundenInstanz.Konten[List_Konten.SelectedIndex]);
+                Window Win_GeldAbheben = new Konto_Bearbeiten(false, kundenInstanz.Konten[List_Konten.SelectedIndex]);
                 Win_GeldAbheben.ShowDialog();
                 List_Konten.Items.Refresh();
             }
@@ -173,13 +173,13 @@ namespace Bank_WPF
         {
             if (istGK == true)
             {
-                Window Win_KontoLöschen = new Form_Löschen(List_Konten.SelectedIndex, "GKonto", gkundenInstanz);
+                Window Win_KontoLöschen = new Löschen(List_Konten.SelectedIndex, "GKonto", gkundenInstanz);
                 Win_KontoLöschen.ShowDialog();
                 List_Konten.Items.Refresh();
             }
             else
             {
-                Window Win_KontoLöschen = new Form_Löschen(List_Konten.SelectedIndex, "Konto", kundenInstanz);
+                Window Win_KontoLöschen = new Löschen(List_Konten.SelectedIndex, "Konto", kundenInstanz);
                 Win_KontoLöschen.ShowDialog();
                 List_Konten.Items.Refresh();
             }
@@ -194,7 +194,7 @@ namespace Bank_WPF
         {
             if (gkundenInstanz.Bonität)
             {
-                Window Win_KreditBeantragen = new Form_Kreditbeantragen(gberaterInstanz, gkundenInstanz);
+                Window Win_KreditBeantragen = new Kredit_Beantragen(gberaterInstanz, gkundenInstanz);
                 Win_KreditBeantragen.ShowDialog();
                 List_Kredite.ItemsSource = gberaterInstanz.Kre.Where(item => item.Knr == gkundenInstanz.Kundennummer);
                 List_Kredite.Items.Refresh();
@@ -208,7 +208,7 @@ namespace Bank_WPF
 
         private void Button_Click_KreditLöschen(object sender, RoutedEventArgs e)
         {
-            Window Win_KreditLöschen = new Form_Löschen(List_Kredite.SelectedIndex, "Kredit", gberaterInstanz);
+            Window Win_KreditLöschen = new Löschen(List_Kredite.SelectedIndex, "Kredit", gberaterInstanz);
             Win_KreditLöschen.ShowDialog();
             List_Kredite.ItemsSource = gberaterInstanz.Kre.Where(item => item.Knr == gkundenInstanz.Kundennummer);
             List_Kredite.Items.Refresh();
@@ -255,7 +255,6 @@ namespace Bank_WPF
             }
         }
 
-#endregion
-
+        #endregion
     }
 }

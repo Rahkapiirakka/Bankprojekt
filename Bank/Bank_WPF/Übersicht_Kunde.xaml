@@ -10,22 +10,19 @@
         <TabControl Margin="10,10,10,10">
             <TabItem x:Name="tab_Konten" Header="Konten">
                 <Grid Background="#FFE5E5E5">
-                    <ListBox x:Name="List_Konten" Margin="10,10,170,10" HorizontalContentAlignment="Stretch" SelectionChanged="Selection_Changed_Konten" >
-                        <ListBox.ItemTemplate>
-                            <DataTemplate>
-                                <Grid Margin="0,2">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="Auto" />
-                                        <ColumnDefinition Width="Auto" />
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Text="{Binding IBAN}" HorizontalAlignment="Left" />
-                                    <TextBlock Text="{Binding Kontostand, StringFormat=\{0:0.00\}}" Grid.Column="1" HorizontalAlignment="Right" />
-                                    <TextBlock Text=" €" Grid.Column="2" HorizontalAlignment="Right" />
-                                </Grid>
-                            </DataTemplate>
-                        </ListBox.ItemTemplate>
-                    </ListBox>
+                    <DataGrid x:Name="List_Konten" Margin="10,10,170,10" IsReadOnly="True" HeadersVisibility="Column" AutoGenerateColumns="False" HorizontalContentAlignment="Stretch" GridLinesVisibility="None" SelectionMode="Single" SelectionChanged="Selection_Changed_Konten">
+                        <DataGrid.Resources>
+                            <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
+                            <Style TargetType="{x:Type DataGridCell}">
+                                <Setter Property="BorderThickness" Value="0" />
+                                <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                            </Style>
+                        </DataGrid.Resources>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="100" Header="Kontonummer" Binding="{Binding Kontonummer}" />
+                            <DataGridTextColumn Width="*" Header="Verfügbares Gutahben (€)" Binding="{Binding Kontostand, StringFormat=\{0:0.00\}}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
                     <Button x:Name="btn_KontoErstellen" Content="Konto erstellen" HorizontalAlignment="Right" Margin="0,10,20,0" VerticalAlignment="Top" Height="30" Width="130" Grid.RowSpan="2" Click="Button_Click_KontoErstellen"/>
                     <Button x:Name="btn_GeldEinzahlen" Content="Geld einzahlen" HorizontalAlignment="Right" Margin="0,50,20,0" VerticalAlignment="Top" Height="30" Width="130" Grid.RowSpan="2" Click="Button_Click_GeldEinzahlen"/>
                     <Button x:Name="btn_GeldAuszahlen" Content="Geld abheben" HorizontalAlignment="Right" Margin="0,90,20,0" VerticalAlignment="Top" Height="30" Width="130" Grid.RowSpan="2" Click="Button_Click_GeldAbheben"/>

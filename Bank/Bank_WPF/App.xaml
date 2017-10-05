@@ -2,7 +2,7 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Bank_WPF"
-             StartupUri="Berater_Kundenübersicht.xaml">
+             StartupUri="Auswahl_Kunden_Berater.xaml">
     <Application.Resources>
          
     </Application.Resources>

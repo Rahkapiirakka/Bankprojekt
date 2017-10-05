@@ -16,9 +16,9 @@ using Bank_Klassenbibliothek;
 namespace Bank_WPF
 {
     /// <summary>
-    /// Interaktionslogik für Form_KundenErstellen.xaml
+    /// Interaktionslogik für Kunden_Erstellen.xaml
     /// </summary>
-    public partial class Form_KundenErstellen : Window
+    public partial class Kunden_Erstellen : Window
     {
         #region Variablen
 
@@ -50,7 +50,7 @@ namespace Bank_WPF
 
         #region Konstruktoren
 
-        public Form_KundenErstellen(Boolean istGK, Berater beraterInstanz)
+        public Kunden_Erstellen(Boolean istGK, Berater beraterInstanz)
         {
             InitializeComponent();
             this.istGK = istGK;
@@ -58,7 +58,7 @@ namespace Bank_WPF
             Chkb_Bonität.IsEnabled = false;
         }
 
-        public Form_KundenErstellen(Boolean istGK, Geschäftskundenberater gberaterInstanz)
+        public Kunden_Erstellen(Boolean istGK, Geschäftskundenberater gberaterInstanz)
         {
             InitializeComponent();
             this.istGK = istGK;

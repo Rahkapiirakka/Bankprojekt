@@ -62,27 +62,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Form_BeraterErstellen.xaml">
+    <Page Include="Berater_Erstellen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Form_KontoBearbeiten.xaml">
+    <Page Include="Konto_Bearbeiten.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Form_KontoErstellen.xaml">
+    <Page Include="Konto_Erstellen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Form_Löschen.xaml">
+    <Page Include="Löschen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Form_Kreditbeantragen.xaml">
+    <Page Include="Kredit_Beantragen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Form_KundenErstellen.xaml">
+    <Page Include="Kunden_Erstellen.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -100,23 +100,23 @@
     <Compile Include="Auswahl_Kunden_Berater.xaml.cs">
       <DependentUpon>Auswahl_Kunden_Berater.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Form_BeraterErstellen.xaml.cs">
-      <DependentUpon>Form_BeraterErstellen.xaml</DependentUpon>
+    <Compile Include="Berater_Erstellen.xaml.cs">
+      <DependentUpon>Berater_Erstellen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Form_KontoBearbeiten.xaml.cs">
-      <DependentUpon>Form_KontoBearbeiten.xaml</DependentUpon>
+    <Compile Include="Konto_Bearbeiten.xaml.cs">
+      <DependentUpon>Konto_Bearbeiten.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Form_KontoErstellen.xaml.cs">
-      <DependentUpon>Form_KontoErstellen.xaml</DependentUpon>
+    <Compile Include="Konto_Erstellen.xaml.cs">
+      <DependentUpon>Konto_Erstellen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Form_Löschen.xaml.cs">
-      <DependentUpon>Form_Löschen.xaml</DependentUpon>
+    <Compile Include="Löschen.xaml.cs">
+      <DependentUpon>Löschen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Form_Kreditbeantragen.xaml.cs">
-      <DependentUpon>Form_Kreditbeantragen.xaml</DependentUpon>
+    <Compile Include="Kredit_Beantragen.xaml.cs">
+      <DependentUpon>Kredit_Beantragen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Form_KundenErstellen.xaml.cs">
-      <DependentUpon>Form_KundenErstellen.xaml</DependentUpon>
+    <Compile Include="Kunden_Erstellen.xaml.cs">
+      <DependentUpon>Kunden_Erstellen.xaml</DependentUpon>
     </Compile>
     <Compile Include="Übersicht_Kunde.xaml.cs">
       <DependentUpon>Übersicht_Kunde.xaml</DependentUpon>

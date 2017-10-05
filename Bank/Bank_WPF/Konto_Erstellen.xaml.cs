@@ -16,9 +16,9 @@ using Bank_Klassenbibliothek;
 namespace Bank_WPF
 {
     /// <summary>
-    /// Interaktionslogik für Form_KontoErstellen.xaml
+    /// Interaktionslogik für Konto_Erstellen.xaml
     /// </summary>
-    public partial class Form_KontoErstellen : Window
+    public partial class Konto_Erstellen : Window
     {
         #region Variablen
 
@@ -34,7 +34,7 @@ namespace Bank_WPF
 
         #region Kontruktoren
 
-        public Form_KontoErstellen(Kunde kundenInstanz)
+        public Konto_Erstellen(Kunde kundenInstanz)
         {
             InitializeComponent();
             this.kundenInstanz = kundenInstanz;

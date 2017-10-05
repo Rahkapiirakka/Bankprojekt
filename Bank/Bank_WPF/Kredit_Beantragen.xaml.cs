@@ -17,9 +17,9 @@ using System.Text.RegularExpressions;
 namespace Bank_WPF
 {
     /// <summary>
-    /// Interaktionslogik für Form_Kreditbeantragen.xaml
+    /// Interaktionslogik für Kredit_Beantragen.xaml
     /// </summary>
-    public partial class Form_Kreditbeantragen : Window
+    public partial class Kredit_Beantragen : Window
     {
         #region Variablen
 
@@ -43,7 +43,7 @@ namespace Bank_WPF
 
         #region Konstruktoren
 
-        public Form_Kreditbeantragen(Geschäftskundenberater gberaterInstanz, Geschäftskunde gkundenInstanz)
+        public Kredit_Beantragen(Geschäftskundenberater gberaterInstanz, Geschäftskunde gkundenInstanz)
         {
             InitializeComponent();
             this.gberaterInstanz = gberaterInstanz;

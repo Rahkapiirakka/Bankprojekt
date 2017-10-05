@@ -10,7 +10,7 @@ namespace Bank_Klassenbibliothek
     {
         #region Variablen
 
-        public static int auto_kundennummer;
+        public static int AUTO_KUNDENNUMMER;
 
         private int kundennummer;
 
@@ -34,7 +34,7 @@ namespace Bank_Klassenbibliothek
 
         public Kunde(string name, string vorname) :base(name, vorname)
         {
-            this.kundennummer = System.Threading.Interlocked.Increment(ref auto_kundennummer);
+            this.kundennummer = System.Threading.Interlocked.Increment(ref AUTO_KUNDENNUMMER);
             this.Konten = new List<Konto>();
         }
 
