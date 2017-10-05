@@ -10,7 +10,7 @@
         <TabControl Margin="10,10,10,10">
             <TabItem x:Name="tab_Konten" Header="Konten">
                 <Grid Background="#FFE5E5E5">
-                    <DataGrid x:Name="List_Konten" Margin="10,10,170,10" IsReadOnly="True" HeadersVisibility="Column" AutoGenerateColumns="False" HorizontalContentAlignment="Stretch" GridLinesVisibility="None" SelectionMode="Single" SelectionChanged="Selection_Changed_Konten">
+                    <DataGrid x:Name="List_Konten" Margin="10,10,170,10" IsReadOnly="True" RowHeight="20" HeadersVisibility="Column" AutoGenerateColumns="False" HorizontalContentAlignment="Stretch" GridLinesVisibility="None" SelectionMode="Single" SelectionChanged="Selection_Changed_Konten">
                         <DataGrid.Resources>
                             <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
                             <Style TargetType="{x:Type DataGridCell}">
@@ -20,7 +20,7 @@
                         </DataGrid.Resources>
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="100" Header="Kontonummer" Binding="{Binding Kontonummer}" />
-                            <DataGridTextColumn Width="*" Header="Verfügbares Gutahben (€)" Binding="{Binding Kontostand, StringFormat=\{0:0.00\}}" />
+                            <DataGridTextColumn Width="*" Header="Verfügbares Gutahben" Binding="{Binding Kontostand, ConverterCulture='de-DE', StringFormat=c}" />
                         </DataGrid.Columns>
                     </DataGrid>
                     <Button x:Name="btn_KontoErstellen" Content="Konto erstellen" HorizontalAlignment="Right" Margin="0,10,20,0" VerticalAlignment="Top" Height="30" Width="130" Grid.RowSpan="2" Click="Button_Click_KontoErstellen"/>
@@ -33,7 +33,7 @@
                 <Grid Background="#FFE5E5E5">
                     <Button x:Name="btn_KreditBeantragen" Content="Kredit beantragen" HorizontalAlignment="Right" Margin="0,10,20,0" VerticalAlignment="Top" Height="30" Width="130" Grid.Column="2" Click="Button_Click_KreditBeantragen"/>
                     <Button x:Name="btn_KreditLöschen" Content="Kredit löschen" HorizontalAlignment="Right" Margin="0,50,20,0" VerticalAlignment="Top" Height="30" Width="130" Grid.Column="2" Click="Button_Click_KreditLöschen"/>
-                    <DataGrid x:Name="List_Kredite" Margin="10,10,170,10" IsReadOnly="True" HeadersVisibility="Column" AutoGenerateColumns="False" HorizontalContentAlignment="Stretch" GridLinesVisibility="None" SelectionMode="Single" SelectionChanged="Selection_Changed_Kredite">
+                    <DataGrid x:Name="List_Kredite" Margin="10,10,170,10" IsReadOnly="True" HeadersVisibility="Column" AutoGenerateColumns="False" HorizontalContentAlignment="Stretch" GridLinesVisibility="None" SelectionMode="Single" RowHeight="20" SelectionChanged="Selection_Changed_Kredite">
                         <DataGrid.Resources>
                             <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
                             <Style TargetType="{x:Type DataGridCell}">
@@ -42,8 +42,8 @@
                             </Style>
                         </DataGrid.Resources>
                         <DataGrid.Columns>
-                            <DataGridTextColumn Width="*" Header="Summe (€)" Binding="{Binding Summe, StringFormat=\{0:0.00\}}" />
-                            <DataGridTextColumn Width="*" Header="Zins (%)" Binding="{Binding Zins, StringFormat=\{0:0.00\}}" />
+                            <DataGridTextColumn Width="*" Header="Summe" Binding="{Binding Summe, ConverterCulture='de-DE', StringFormat=c}" />
+                            <DataGridTextColumn Width="*" Header="Zins (%)" Binding="{Binding Zins, ConverterCulture='de-DE', StringFormat={}{0:N2} %}" />
                             <DataGridTextColumn Width="*" Header="Start" Binding="{Binding Start, StringFormat=\{0:dd.MM.yyyy\}}" />
                             <DataGridTextColumn Width="*" Header="Ende" Binding="{Binding Ende, StringFormat=\{0:dd.MM.yyyy\}}" />
                         </DataGrid.Columns>

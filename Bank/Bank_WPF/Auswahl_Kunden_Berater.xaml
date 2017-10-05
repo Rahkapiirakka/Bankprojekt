@@ -31,7 +31,7 @@
                             </DataTemplate>
                         </ListBox.ItemTemplate>
                     </ListBox>
-                    <DataGrid x:Name="List_Kunden" Grid.Column="3" IsReadOnly="True" HeadersVisibility="Column" Margin="0,30,10,50" AutoGenerateColumns="False" HorizontalContentAlignment="Stretch" GridLinesVisibility="None" SelectionMode="Single" SelectionChanged="Selection_Changed_Kunde">
+                    <DataGrid x:Name="List_Kunden" Grid.Column="3" RowHeight="20" IsReadOnly="True" HeadersVisibility="Column" Margin="0,30,10,50" AutoGenerateColumns="False" HorizontalContentAlignment="Stretch" GridLinesVisibility="None" SelectionMode="Single" SelectionChanged="Selection_Changed_Kunde" VerticalContentAlignment="Stretch">
                         <DataGrid.Resources>
                             <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
                             <Style TargetType="{x:Type DataGridCell}">
@@ -81,7 +81,7 @@
                     <Button x:Name="btn_GKundebearbeiten" Content="Kunde bearbeiten" Grid.Column="3" Margin="215,0,0,10" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="110" Click="Button_Click_GKundenBearbeiten"/>
                     <Label x:Name="lbl_GBeraterauswählen" Content="Geschäftskundenberater auswählen" Grid.Column="1" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="26" Width="200"/>
                     <Label x:Name="lbl_GKundeauswählen" Content="Geschäftskunde auswählen" Grid.Column="3" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Height="26" Width="172"/>
-                    <DataGrid x:Name="List_GKunden" Grid.Column="3" IsReadOnly="True" HeadersVisibility="Column" Margin="0,30,10,50" AutoGenerateColumns="False" HorizontalContentAlignment="Stretch" GridLinesVisibility="None" SelectionMode="Single" SelectionChanged="Selection_Changed_GKunde">
+                    <DataGrid x:Name="List_GKunden" Grid.Column="3" RowHeight="20" IsReadOnly="True" HeadersVisibility="Column" Margin="0,30,10,50" AutoGenerateColumns="False" HorizontalContentAlignment="Stretch" GridLinesVisibility="None" SelectionMode="Single" SelectionChanged="Selection_Changed_GKunde">
                         <DataGrid.Resources>
                             <SolidColorBrush x:Key="{x:Static SystemColors.InactiveSelectionHighlightBrushKey}" Color="DarkGray"/>
                             <Style TargetType="{x:Type DataGridCell}">
