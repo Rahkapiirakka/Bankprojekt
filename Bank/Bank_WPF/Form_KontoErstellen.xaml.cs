@@ -20,6 +20,8 @@ namespace Bank_WPF
     /// </summary>
     public partial class Form_KontoErstellen : Window
     {
+        #region Variablen
+
         private Kunde kundenInstanz;
 
         public Kunde KundenInstanz
@@ -28,11 +30,19 @@ namespace Bank_WPF
             set { kundenInstanz = value; }
         }
 
+        #endregion
+
+        #region Kontruktoren
+
         public Form_KontoErstellen(Kunde kundenInstanz)
         {
             InitializeComponent();
             this.kundenInstanz = kundenInstanz;
         }
+
+        #endregion
+
+        #region Methoden
 
         private void Button_Click_KontoErstellen(object sender, RoutedEventArgs e)
         {
@@ -44,5 +54,7 @@ namespace Bank_WPF
         {
             this.Close();
         }
+        
+        #endregion
     }
 }

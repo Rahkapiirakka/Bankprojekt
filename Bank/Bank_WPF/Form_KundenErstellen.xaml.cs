@@ -20,6 +20,8 @@ namespace Bank_WPF
     /// </summary>
     public partial class Form_KundenErstellen : Window
     {
+        #region Variablen
+
         private Boolean istGK;
 
         public Boolean IstGK
@@ -44,6 +46,10 @@ namespace Bank_WPF
             set { gberaterInstanz = value; }
         }
 
+        #endregion
+
+        #region Konstruktoren
+
         public Form_KundenErstellen(Boolean istGK, Berater beraterInstanz)
         {
             InitializeComponent();
@@ -59,6 +65,10 @@ namespace Bank_WPF
             this.gberaterInstanz = gberaterInstanz;
             Chkb_Bonität.IsEnabled = true;
         }
+
+        #endregion
+
+        #region Methoden
 
         private void Button_Clicked_KundeErstellen(object sender, RoutedEventArgs e)
         {
@@ -81,5 +91,7 @@ namespace Bank_WPF
                 Win_Benachrichtigung.ShowDialog();
             }
         }
+
+        #endregion
     }
 }

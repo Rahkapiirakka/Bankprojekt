@@ -8,11 +8,8 @@ namespace Bank_Klassenbibliothek
 {
     public abstract class Person
     {
-        /********************************
-        **                             **
-        **  VARIABLEN & EIGENSCHAFTEN  **
-        **                             **
-        ********************************/
+        #region Variablen
+
         private String name;
 
         public String Name
@@ -29,15 +26,16 @@ namespace Bank_Klassenbibliothek
             set { vorname = value; }
         }
 
-        /******************************
-        **                           **
-        **  KONSTRUKTOR &FUNKTIONEN  **
-        **                           **
-        ******************************/
+        #endregion
+
+        #region Konstruktor
+
         public Person(string name, string vorname)
         {
             this.name = name;
             this.vorname = vorname;
         }
+
+        #endregion
     }
 }

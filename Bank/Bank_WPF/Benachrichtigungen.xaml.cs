@@ -19,6 +19,7 @@ namespace Bank_WPF
     /// </summary>
     public partial class Benachrichtigungen : Window
     {
+        #region Variablen
         private string text;
 
         public string Text
@@ -35,6 +36,10 @@ namespace Bank_WPF
             set { titel = value; }
         }
 
+        #endregion
+
+        #region Konstruktoren
+
         public Benachrichtigungen(string titel, string text)
         {
             InitializeComponent();
@@ -45,9 +50,15 @@ namespace Bank_WPF
             Win_Benachrichtigungen.Title = titel;        
         }
 
+        #endregion
+
+        #region Methoden
+
         private void Button_Click_OK(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
+        #endregion
     }
 }

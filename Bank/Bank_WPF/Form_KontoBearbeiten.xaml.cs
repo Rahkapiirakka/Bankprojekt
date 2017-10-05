@@ -21,6 +21,8 @@ namespace Bank_WPF
     /// </summary>
     public partial class Form_KontoBearbeiten : Window
     {
+        #region Variablen
+
         private Boolean einzahlen;
 
         public Boolean Einzahlen
@@ -36,6 +38,10 @@ namespace Bank_WPF
             get { return kontoInstanz; }
             set { kontoInstanz = value; }
         }
+
+        #endregion
+
+        #region Konstruktoren
 
         public Form_KontoBearbeiten(Boolean einzahlen, Konto kontoInstanz)
         {
@@ -59,6 +65,11 @@ namespace Bank_WPF
             }
         }
 
+        #endregion
+
+        #region Methoden
+
+        // Ermöglicht nur das Eingeben von Zahlen und einem Komma im Feld txtb_BetragÄndern
         void NumericTextBoxInput(object sender, TextCompositionEventArgs e)
         {
             var regex = new Regex(@"^[0-9]*(?:\,[0-9]*)?$");
@@ -72,7 +83,7 @@ namespace Bank_WPF
             }
         }
 
-
+        
         private void Button_Click_BetragÄndern(object sender, RoutedEventArgs e)
         {
             if (!String.IsNullOrWhiteSpace(txtb_BetragÄndern.Text))
@@ -111,5 +122,6 @@ namespace Bank_WPF
             }
         }
 
+        #endregion
     }   
 }

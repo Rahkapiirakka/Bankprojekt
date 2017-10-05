@@ -8,11 +8,8 @@ namespace Bank_Klassenbibliothek
 {
     public class Geschäftskundenberater : Berater
     {
-        /********************************
-        **                             **
-        **  VARIABLEN & EIGENSCHAFTEN  **
-        **                             **
-        ********************************/
+        #region Variablen
+
         private List<Kredit> kre;
 
         public List<Kredit> Kre
@@ -29,16 +26,19 @@ namespace Bank_Klassenbibliothek
             set { gKunden = value; }
         }
 
-        /******************************
-        **                           **
-        **  KONSTRUKTOR &FUNKTIONEN  **
-        **                           **
-        ******************************/
+        #endregion
+
+        #region Konstruktor
+
         public Geschäftskundenberater(string name, string vorname) : base(name, vorname)
         {
             this.kre = new List<Kredit>();
             this.GKunden = new List<Geschäftskunde>();
         }
+
+        #endregion
+
+        #region Methoden
 
         public void KreditErstellen(double summe, double zins, DateTime start, DateTime ende, int knr)
         {
@@ -59,5 +59,7 @@ namespace Bank_Klassenbibliothek
         {
             gKunden.RemoveAt(Position);
         }
+
+        #endregion
     }
 }

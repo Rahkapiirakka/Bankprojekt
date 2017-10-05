@@ -20,6 +20,8 @@ namespace Bank_WPF
     /// </summary>
     public partial class Form_BeraterErstellen : Window
     {
+        #region Variablen
+
         private Boolean istGKB;
 
         public Boolean IstGKB
@@ -36,6 +38,9 @@ namespace Bank_WPF
             set { bankInstanz = value; }
         }
 
+        #endregion
+
+        #region Konstruktoren
 
         public Form_BeraterErstellen(Boolean istGKB, Bank bankInstanz)
         {
@@ -43,6 +48,10 @@ namespace Bank_WPF
             this.istGKB = istGKB;
             InitializeComponent();
         }
+
+        #endregion
+
+        #region Methoden
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -66,5 +75,7 @@ namespace Bank_WPF
                 Win_Benachrichtigung.ShowDialog();
             }
         }
+
+        #endregion
     }
 }

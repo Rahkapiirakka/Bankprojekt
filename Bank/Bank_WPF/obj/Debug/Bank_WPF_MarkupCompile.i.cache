@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Felix\Source\Repos\Bankprojekt\Bank\Bank_WPF\App.xaml
-9-904210357
+9-416879596
 
-17-1506197417
+17760905746
 14782590123
-Benachrichtigungen.xaml;Berater_Kundenübersicht.xaml;Form_BeraterErstellen.xaml;Form_KontoBearbeiten.xaml;Form_KontoErstellen.xaml;Form_Löschen.xaml;Form_Kreditbeantragen.xaml;Form_KundenErstellen.xaml;Kundenübersicht.xaml;
+Benachrichtigungen.xaml;Auswahl_Kunden_Berater.xaml;Form_BeraterErstellen.xaml;Form_KontoBearbeiten.xaml;Form_KontoErstellen.xaml;Form_Löschen.xaml;Form_Kreditbeantragen.xaml;Form_KundenErstellen.xaml;Übersicht_Kunde.xaml;
 
 True
 

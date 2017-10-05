@@ -58,7 +58,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Berater_Kundenübersicht.xaml">
+    <Page Include="Auswahl_Kunden_Berater.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -86,7 +86,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Kundenübersicht.xaml">
+    <Page Include="Übersicht_Kunde.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -97,8 +97,8 @@
     <Compile Include="Benachrichtigungen.xaml.cs">
       <DependentUpon>Benachrichtigungen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Berater_Kundenübersicht.xaml.cs">
-      <DependentUpon>Berater_Kundenübersicht.xaml</DependentUpon>
+    <Compile Include="Auswahl_Kunden_Berater.xaml.cs">
+      <DependentUpon>Auswahl_Kunden_Berater.xaml</DependentUpon>
     </Compile>
     <Compile Include="Form_BeraterErstellen.xaml.cs">
       <DependentUpon>Form_BeraterErstellen.xaml</DependentUpon>
@@ -118,8 +118,8 @@
     <Compile Include="Form_KundenErstellen.xaml.cs">
       <DependentUpon>Form_KundenErstellen.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Kundenübersicht.xaml.cs">
-      <DependentUpon>Kundenübersicht.xaml</DependentUpon>
+    <Compile Include="Übersicht_Kunde.xaml.cs">
+      <DependentUpon>Übersicht_Kunde.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

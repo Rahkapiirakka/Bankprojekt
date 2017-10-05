@@ -20,6 +20,9 @@ namespace Bank_WPF
     /// </summary>
     public partial class Form_Löschen : Window
     {
+
+        #region Variablen 
+
         private int position;
 
         public int Position
@@ -67,6 +70,10 @@ namespace Bank_WPF
             get { return typ; }
             set { typ = value; }
         }
+
+        #endregion
+
+        #region Konstrukoren
 
         public Form_Löschen(int position, string typ, Berater beraterInstanz)
         {
@@ -119,6 +126,11 @@ namespace Bank_WPF
             lbl_KontoerstellenFrage.Content = "Wollen Sie das Konto löschen?";
         }
 
+        #endregion
+
+        #region Methoden
+        // Methoden für Form_Löschen
+
         private void Button_Click_NichtLöschen(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -153,5 +165,7 @@ namespace Bank_WPF
                     break;
             }
         }
+
+        #endregion
     }
 }

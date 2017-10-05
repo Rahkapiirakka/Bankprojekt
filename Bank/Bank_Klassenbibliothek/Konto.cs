@@ -8,25 +8,18 @@ namespace Bank_Klassenbibliothek
 {
     public class Konto
     {
-        /*********************************
-         **                             **
-         **  VARIABLEN & EIGENSCHAFTEN  **
-         **                             **
-         ********************************/
+        #region Variablen
 
-        private static int auto_iban;
+        private static int AUTO_KONTONUMMER;
 
-        // Variable & Eigenschaften für die IBAN
-        private int iban;
+        private int kontonummer;
 
-        public int IBAN
+        public int Kontonummer
         {
-            get { return iban; }
-            set { iban = value; }
+            get { return kontonummer; }
+            set { kontonummer = value; }
         }
 
-        
-        // Variable & Eigenschaften für den Kontostand
         private double kontostand;
 
         public double Kontostand
@@ -35,20 +28,19 @@ namespace Bank_Klassenbibliothek
             set { kontostand = value; }
         }
 
-        /******************************
-        **                           **
-        **  KONSTRUKTOR &FUNKTIONEN  **
-        **                           **
-        ******************************/
+        #endregion
 
-        // Konstruktor der Klasse
+        #region Konstruktor
+
         public Konto(double kontostand)
         {
-            this.iban = System.Threading.Interlocked.Increment(ref auto_iban);
+            this.kontonummer = System.Threading.Interlocked.Increment(ref AUTO_KONTONUMMER);
             this.kontostand = kontostand;
         }
 
-        // Funktion
+        #endregion
+
+        #region Methoden
 
         public void GeldEinzahlen(double Betrag)
         {
@@ -59,5 +51,7 @@ namespace Bank_Klassenbibliothek
         {
             kontostand = kontostand - Betrag;
         }
+
+        #endregion
     }
 }

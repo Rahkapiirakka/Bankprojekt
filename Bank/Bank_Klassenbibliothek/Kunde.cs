@@ -8,11 +8,8 @@ namespace Bank_Klassenbibliothek
 {
     public class Kunde : Person
     {
-        /********************************
-        **                             **
-        **  VARIABLEN & EIGENSCHAFTEN  **
-        **                             **
-        ********************************/
+        #region Variablen
+
         public static int auto_kundennummer;
 
         private int kundennummer;
@@ -31,16 +28,19 @@ namespace Bank_Klassenbibliothek
             set { konten = value; }
         }
 
-        /******************************
-        **                           **
-        **  KONSTRUKTOR &FUNKTIONEN  **
-        **                           **
-        ******************************/
+        #endregion
+
+        #region Konstruktoren
+
         public Kunde(string name, string vorname) :base(name, vorname)
         {
             this.kundennummer = System.Threading.Interlocked.Increment(ref auto_kundennummer);
             this.Konten = new List<Konto>();
         }
+
+        #endregion
+
+        #region Methoden
 
         public void KontoErstellen()
         {
@@ -57,5 +57,7 @@ namespace Bank_Klassenbibliothek
             this.Name = name;
             this.Vorname = vorname;
         }
+
+        #endregion
     }
 }

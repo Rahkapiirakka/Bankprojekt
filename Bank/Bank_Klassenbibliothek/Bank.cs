@@ -8,6 +8,8 @@ namespace Bank_Klassenbibliothek
 {
     public class Bank
     {
+        #region Variablen
+
         private List<Berater> ber;
 
         public List<Berater> Ber
@@ -24,11 +26,19 @@ namespace Bank_Klassenbibliothek
             set { gkBer = value; }
         }
 
+        #endregion
+
+        #region Konstruktoren
+
         public Bank()
         {
             this.ber = new List<Berater>();
             this.gkBer = new List<Geschäftskundenberater>();
         }
+
+        #endregion
+
+        #region Methoden
 
         public void BeraterErstellen(string name, string vorname)
         {
@@ -49,6 +59,8 @@ namespace Bank_Klassenbibliothek
         {
             GKBer.RemoveAt(position);
         }
+
+        #endregion
     }
 
 }

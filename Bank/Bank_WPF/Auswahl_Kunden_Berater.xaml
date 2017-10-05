@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Bank_WPF"
-        xmlns:Bank_Klassenbibliothek="clr-namespace:Bank_Klassenbibliothek;assembly=Bank_Klassenbibliothek" x:Name="Win_Kundenübersicht" x:Class="Bank_WPF.Berater_Kundenübersicht"
+        xmlns:Bank_Klassenbibliothek="clr-namespace:Bank_Klassenbibliothek;assembly=Bank_Klassenbibliothek" x:Name="Win_Kundenübersicht" x:Class="Bank_WPF.Auswahl_Kunden_Berater"
         mc:Ignorable="d"
         Title="Kundenauswahl" MinHeight="400" MinWidth="600" Width="600" WindowStartupLocation="CenterOwner">
     <Grid>

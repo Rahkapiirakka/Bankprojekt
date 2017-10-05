@@ -8,11 +8,8 @@ namespace Bank_Klassenbibliothek
 {
     public class Geschäftskunde : Kunde
     {
-    	/********************************
-	**                             **
-	**  VARIABLEN & EIGENSCHAFTEN  **
-	**                             **
-	********************************/
+        #region Variablen
+
         private Boolean bonität;
 
         public Boolean Bonität
@@ -21,15 +18,18 @@ namespace Bank_Klassenbibliothek
             set { bonität = value; }
         }
 
-	/******************************
-	**                           **
-	**  KONSTRUKTOR &FUNKTIONEN  **
-	**                           **
-	******************************/
+        #endregion
+
+        #region Konstruktoren
+
         public Geschäftskunde(string name, string vorname, Boolean bonität) : base(name, vorname)
         {
             this.bonität = bonität;
         }
+
+        #endregion
+
+        #region Methoden
 
         public void KundeÄndern(string name, string vorname, Boolean bonität)
         {
@@ -37,5 +37,7 @@ namespace Bank_Klassenbibliothek
             this.Vorname = vorname;
             this.Bonität = bonität;
         }
+
+        #endregion
     }
 }

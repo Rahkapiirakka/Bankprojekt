@@ -21,6 +21,8 @@ namespace Bank_WPF
     /// </summary>
     public partial class Form_Kreditbeantragen : Window
     {
+        #region Variablen
+
         private Geschäftskundenberater gberaterInstanz;
 
         public Geschäftskundenberater GBeraterInstanz
@@ -37,6 +39,9 @@ namespace Bank_WPF
             set { gkundenInstanz = value; }
         }
 
+        #endregion
+
+        #region Konstruktoren
 
         public Form_Kreditbeantragen(Geschäftskundenberater gberaterInstanz, Geschäftskunde gkundenInstanz)
         {
@@ -45,6 +50,11 @@ namespace Bank_WPF
             this.gkundenInstanz = gkundenInstanz;
         }
 
+        #endregion
+
+        #region Methoden
+
+        // Ermöglicht nur das Eingeben von Zahlen und einem Komma in den Feldern txtb_Summe und txtb_Zins
         void NumericTextBoxInput(object sender, TextCompositionEventArgs e)
         {
             var regex = new Regex(@"^[0-9]*(?:\,[0-9]*)?$");
@@ -95,5 +105,7 @@ namespace Bank_WPF
                 }
             }
         }
+
+        #endregion
     }
 }

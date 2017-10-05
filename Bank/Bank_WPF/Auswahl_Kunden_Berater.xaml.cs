@@ -16,20 +16,27 @@ using Bank_Klassenbibliothek;
 namespace Bank_WPF
 {
     /// <summary>
-    /// Interaktionslogik für Berater_Kundenübersicht.xaml
+    /// Interaktionslogik für Auswahl_Kunden_Berater.xaml
     /// </summary>
-    public partial class Berater_Kundenübersicht : Window
+    public partial class Auswahl_Kunden_Berater : Window
     {
+        #region Variablen
 
-        Bank Sparbank;
+        public Bank Sparbank;
 
-        public Berater_Kundenübersicht()
+        #endregion
+
+        #region Konstruktoren
+
+        public Auswahl_Kunden_Berater()
         {
             InitializeComponent();
+
             if (Sparbank == null)
             {
                 Sparbank = new Bank();
             }
+
             List_Berater.ItemsSource = Sparbank.Ber;
             List_GBerater.ItemsSource = Sparbank.GKBer;
             btn_GKundebearbeiten.IsEnabled = false;
@@ -40,11 +47,14 @@ namespace Bank_WPF
             btn_GKundeLöschen.IsEnabled = false;
         }
 
-        // Tab Privatkunde
+        #endregion
+
+        #region Tab Privatkunden
+        // Methoden für Privatkunde
 
         private void Button_Click_KundeBearbeiten(object sender, RoutedEventArgs e)
         {
-            Window Win_PKÜ = new Kundenübersicht(false, Sparbank.Ber[List_Berater.SelectedIndex].Kunden[List_Kunden.SelectedIndex]);
+            Window Win_PKÜ = new Übersicht_Kunde(false, Sparbank.Ber[List_Berater.SelectedIndex].Kunden[List_Kunden.SelectedIndex]);
             Win_PKÜ.ShowDialog();
             List_Kunden.Items.Refresh();
         }
@@ -91,8 +101,10 @@ namespace Bank_WPF
             List_Kunden.Items.Refresh();
         }
 
+        #endregion
 
-        // Tab Geschäftskunde
+        #region Tab Geschäftskunde
+        // Methoden für Geschäftskunde
 
         private void Button_Click_GKBeraterErstellen(object sender, RoutedEventArgs e)
         {
@@ -103,7 +115,7 @@ namespace Bank_WPF
 
         private void Button_Click_GKundenBearbeiten(object sender, RoutedEventArgs e)
         {
-            Window Win_GKÜ = new Kundenübersicht(true, Sparbank.GKBer[List_GBerater.SelectedIndex].GKunden[List_GKunden.SelectedIndex], Sparbank.GKBer[List_GBerater.SelectedIndex]);
+            Window Win_GKÜ = new Übersicht_Kunde(true, Sparbank.GKBer[List_GBerater.SelectedIndex].GKunden[List_GKunden.SelectedIndex], Sparbank.GKBer[List_GBerater.SelectedIndex]);
             Win_GKÜ.ShowDialog();
             List_GKunden.Items.Refresh();
         }
@@ -142,5 +154,7 @@ namespace Bank_WPF
             Win_GKundeLöschen.ShowDialog();
             List_GKunden.Items.Refresh();
         }
+
+        #endregion
     }  
 }

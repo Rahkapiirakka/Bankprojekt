@@ -8,18 +8,7 @@ namespace Bank_Klassenbibliothek
 {
     public class Berater : Person
     {
-        /********************************
-	**                             **
-	**  VARIABLEN & EIGENSCHAFTEN  **
-	**                             **
-	********************************/
-        private int beraterID;
-
-        public int BeraterID
-        {
-            get { return beraterID; }
-            set { beraterID = value; }
-        }
+        #region Variablen
 
         private List<Kunde> kunden;
 
@@ -28,16 +17,19 @@ namespace Bank_Klassenbibliothek
             get { return kunden; }
             set { kunden = value; }
         }
+        
+        #endregion
 
-	/******************************
-	**                           **
-	**  KONSTRUKTOR &FUNKTIONEN  **
-	**                           **
-	******************************/
+        #region Konstruktoren
+
         public Berater(string name, string vorname) : base(name, vorname)
         {
             this.kunden = new List<Kunde>(); 
         }
+
+        #endregion
+
+        #region Methoden
 
         public void KundeErstellen(string name, string vorname)
         {
@@ -48,5 +40,7 @@ namespace Bank_Klassenbibliothek
         {
             Kunden.RemoveAt(Position);
         }
+
+        #endregion
     }
 }

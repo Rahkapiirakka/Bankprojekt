@@ -16,10 +16,11 @@ using Bank_Klassenbibliothek;
 namespace Bank_WPF
 {
     /// <summary>
-    /// Interaktionslogik für Kundenübersicht.xaml
+    /// Interaktionslogik für Übersicht_Kunde.xaml
     /// </summary>
-    public partial class Kundenübersicht : Window
+    public partial class Übersicht_Kunde : Window
     {
+        #region Variablen
         private Boolean istGK;
 
         public Boolean IstGK
@@ -52,7 +53,12 @@ namespace Bank_WPF
             set { gberaterInstanz = value; }
         }
 
-        public Kundenübersicht(Boolean istGK, Kunde kundenInstanz)
+        #endregion
+
+        #region Kontruktoren 
+        // Konstruktoren der Klasse Übersicht_Kunde
+
+        public Übersicht_Kunde(Boolean istGK, Kunde kundenInstanz)
         {
             InitializeComponent();
             this.istGK = istGK;
@@ -71,7 +77,7 @@ namespace Bank_WPF
             btn_KreditLöschen.IsEnabled = false;
         }
 
-        public Kundenübersicht(Boolean istGK, Geschäftskunde gkundenInstanz, Geschäftskundenberater gberaterInstanz)
+        public Übersicht_Kunde(Boolean istGK, Geschäftskunde gkundenInstanz, Geschäftskundenberater gberaterInstanz)
         {
             InitializeComponent();
             this.istGK = istGK;
@@ -92,6 +98,11 @@ namespace Bank_WPF
 
             btn_KreditLöschen.IsEnabled = false;
         }
+
+#endregion
+
+        #region Tab Konto
+        // Methoden für Konto
 
         private void Button_Click_KontoErstellen(object sender, RoutedEventArgs e)
         {
@@ -141,22 +152,6 @@ namespace Bank_WPF
             }
         }
 
-        private void Button_Click_KreditBeantragen(object sender, RoutedEventArgs e)
-        {
-            if (gkundenInstanz.Bonität)
-            {
-                Window Win_KreditBeantragen = new Form_Kreditbeantragen(gberaterInstanz, gkundenInstanz);
-                Win_KreditBeantragen.ShowDialog();
-                List_Kredite.ItemsSource = gberaterInstanz.Kre.Where(item => item.Knr == gkundenInstanz.Kundennummer);
-                List_Kredite.Items.Refresh();
-            }
-            else
-            {
-                Window Win_Benachrichtigung = new Benachrichtigungen("Keine Bonität", "Dieser Kunde besitzt keine Bonität. Sollte Sich diese nach eben erfolgter Prüfung geändert haben, können Sie den Bonitätsstatus in den Kundeninformationen ändern.");
-                Win_Benachrichtigung.ShowDialog();
-            }
-        }
-
         private void Selection_Changed_Konten(object sender, SelectionChangedEventArgs e)
         {
             if (List_Konten.HasItems)
@@ -171,7 +166,7 @@ namespace Bank_WPF
                 btn_GeldEinzahlen.IsEnabled = false;
                 btn_KontoLöschen.IsEnabled = false;
             }
-            
+
         }
 
         private void Button_Click_KontoLöschen(object sender, RoutedEventArgs e)
@@ -190,6 +185,27 @@ namespace Bank_WPF
             }
         }
 
+#endregion
+
+        #region Tab Kredite
+        // Methoden für Kredite
+
+        private void Button_Click_KreditBeantragen(object sender, RoutedEventArgs e)
+        {
+            if (gkundenInstanz.Bonität)
+            {
+                Window Win_KreditBeantragen = new Form_Kreditbeantragen(gberaterInstanz, gkundenInstanz);
+                Win_KreditBeantragen.ShowDialog();
+                List_Kredite.ItemsSource = gberaterInstanz.Kre.Where(item => item.Knr == gkundenInstanz.Kundennummer);
+                List_Kredite.Items.Refresh();
+            }
+            else
+            {
+                Window Win_Benachrichtigung = new Benachrichtigungen("Keine Bonität", "Dieser Kunde besitzt keine Bonität. Sollte sich diese nach eben erfolgter Prüfung geändert haben, können Sie den Bonitätsstatus in den Kundeninformationen ändern.");
+                Win_Benachrichtigung.ShowDialog();
+            }
+        }
+
         private void Button_Click_KreditLöschen(object sender, RoutedEventArgs e)
         {
             Window Win_KreditLöschen = new Form_Löschen(List_Kredite.SelectedIndex, "Kredit", gberaterInstanz);
@@ -197,6 +213,23 @@ namespace Bank_WPF
             List_Kredite.ItemsSource = gberaterInstanz.Kre.Where(item => item.Knr == gkundenInstanz.Kundennummer);
             List_Kredite.Items.Refresh();
         }
+
+        private void Selection_Changed_Kredite(object sender, SelectionChangedEventArgs e)
+        {
+            if (List_Kredite.HasItems)
+            {
+                btn_KreditLöschen.IsEnabled = true;
+            }
+            else
+            {
+                btn_KreditLöschen.IsEnabled = false;
+            }
+        }
+
+        #endregion
+
+        #region Tab Kundeninformation
+        // Methoden für Kundenonformationen
 
         private void Button_Click_KundenÄndern(object sender, RoutedEventArgs e)
         {
@@ -222,16 +255,7 @@ namespace Bank_WPF
             }
         }
 
-        private void Selection_Changed_Kredite(object sender, SelectionChangedEventArgs e)
-        {
-            if (List_Kredite.HasItems)
-            {
-                btn_KreditLöschen.IsEnabled = true;
-            }
-            else
-            {
-                btn_KreditLöschen.IsEnabled = false;
-            }
-        }
+#endregion
+
     }
 }
